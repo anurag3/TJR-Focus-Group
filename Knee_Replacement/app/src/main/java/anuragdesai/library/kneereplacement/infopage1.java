@@ -22,5 +22,6 @@ public class infopage1 extends AppCompatActivity implements View.OnClickListener
         button1.setOnClickListener(this);
         Intent intent = new Intent(this, gotoSurveyActivity.class);
         startActivity(intent);
+        // Merge test
     }
 }
