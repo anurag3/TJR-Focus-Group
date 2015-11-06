@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="anuragdesai.library.kneereplacement" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="TJR"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Taptap3">
+        </activity>
+        <activity
+            android:name=".MainActivity3">
+        </activity>
+        <activity
+            android:name=".gotoSurveyActivity">
+        </activity>
+        <activity
+            android:name=".goToPainSurvey1">
+        </activity>
+        <activity
+            android:name=".goToPainSurvey2">
+        </activity>
+        <activity
+            android:name=".goToPainSurvey3">
+        </activity>
+        <activity
+            android:name=".goToPainSurvey4">
+        </activity>
+        <activity
+            android:name=".Taptap6">
+        </activity>
+        <activity
+            android:name=".infopage1">
+        </activity>
+        <activity
+            android:name=".infopage2">
+        </activity>
+        <activity
+            android:name=".infopage3">
+        </activity>
+        <activity
+            android:name=".infopage4">
+        </activity>
+        <activity
+            android:name=".infopage5">
+        </activity>
+        <activity
+            android:name=".infopage6">
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".goToPainSurvey1">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/bodyoutline"
+
+        />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/bodybtn11"
+        android:onClick="horizontaltap"
+        android:background="@android:color/darker_gray"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/bodybtn21"
+        android:onClick="horizontaltap"
+        android:background="@android:color/darker_gray"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/bodybtn11"
+        android:layout_toStartOf="@+id/bodybtn11" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/bodybtn31"
+        android:onClick="horizontaltap"
+        android:background="@android:color/darker_gray"
+        android:layout_alignTop="@+id/bodybtn21"
+        android:layout_toEndOf="@+id/bodybtn11"
+        android:layout_marginStart="6dp" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/bodybtn41"
+        android:onClick="horizontaltap"
+        android:background="@android:color/darker_gray"
+
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/bodybtn21"
+        android:layout_alignStart="@+id/bodybtn21" />
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/bodybtn51"
+        android:onClick="horizontaltap"
+        android:background="@android:color/darker_gray"
+        android:layout_alignTop="@+id/bodybtn41"
+        android:layout_alignStart="@+id/bodybtn31"
+        android:layout_marginStart="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/interface1next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:onClick="onClick" />
+
+
+</RelativeLayout>
