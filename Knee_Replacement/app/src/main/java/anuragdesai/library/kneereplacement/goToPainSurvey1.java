@@ -40,40 +40,40 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
 
     }
     public void buttonselection1(View view) {
-        B1 = (Button) view.findViewById(R.id.bodybtn11);
-        B2 = (Button) view.findViewById(R.id.bodybtn21);
-        B3 = (Button) view.findViewById(R.id.bodybtn31);
-        B4 = (Button) view.findViewById(R.id.bodybtn41);
-        B5 = (Button) view.findViewById(R.id.bodybtn51);
+        B1 = (Button) view.findViewById(R.id.bodybtn1);
+        B2 = (Button) view.findViewById(R.id.bodybtn2);
+        B3 = (Button) view.findViewById(R.id.bodybtn3);
+        B4 = (Button) view.findViewById(R.id.bodybtn4);
+        B5 = (Button) view.findViewById(R.id.bodybtn5);
 
 
         int id=view.getId();
         switch(id) {
-            case R.id.bodybtn11:
+            case R.id.bodybtn1:
                 udc.writeToSDFile("Back_Pain_Survery_Started");
                 count1++;
                 System.out.println(count1);
                 horizontaltap();
                 break;
-            case R.id.bodybtn21:
+            case R.id.bodybtn2:
                 udc.writeToSDFile("Right_Hip_Survery_Started");
                 count1++;
                 System.out.println(count1);
                 horizontaltap();
                 break;
-            case R.id.bodybtn31:
+            case R.id.bodybtn3:
                 udc.writeToSDFile("Left_Hip_Survery_Started");
                 count1++;
                 System.out.println(count1);
                 horizontaltap();
                 break;
-            case R.id.bodybtn41:
+            case R.id.bodybtn4:
                 udc.writeToSDFile("Right_Knee_Survey_Started");
                 count1++;
                 System.out.println(count1);
                 horizontaltap();
                 break;
-            case R.id.bodybtn51:
+            case R.id.bodybtn5:
                 udc.writeToSDFile("Left_Knee_Survey_Started");
                 count1++;
                 System.out.println(count1);
@@ -166,7 +166,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
             startActivity(intent);
         }
         else {
-            Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+            Toast.makeText(this.getApplicationContext(), "Please Complete Pain Input for 3 Joints",
                     Toast.LENGTH_SHORT).show();
 
         }

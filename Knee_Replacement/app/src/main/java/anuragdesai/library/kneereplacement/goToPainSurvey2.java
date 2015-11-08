@@ -51,27 +51,27 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         int id = view.getId();
         switch (id) {
             case R.id.bodybtn1:
-                udc.writeToSDFile("Back_Pain_Survery_Started");
+                udc.writeToSDFile("Back Pain Survery Started");
                 verticaltap();
                 count2++;
                 break;
             case R.id.bodybtn2:
-                udc.writeToSDFile("Right_Hip_Survery_Started");
+                udc.writeToSDFile("Right Hip Survery  Started");
                 verticaltap();
                 count2++;
                 break;
             case R.id.bodybtn3:
-                udc.writeToSDFile("Left_Hip_Survery_Started");
+                udc.writeToSDFile("Left Hip Survery Started");
                 verticaltap();
                 count2++;
                 break;
             case R.id.bodybtn4:
-                udc.writeToSDFile("Right_Knee_Survey_Started");
+                udc.writeToSDFile("Right Knee Survey Started");
                 verticaltap();
                 count2++;
                 break;
             case R.id.bodybtn5:
-                udc.writeToSDFile("Left_Knee_Survey_Started");
+                udc.writeToSDFile("Left Knee Survey Started");
                 verticaltap();
                 count2++;
                 break;
@@ -157,7 +157,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
     }
     else {
-        Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+        Toast.makeText(this.getApplicationContext(), "Please Complete Pain Input for 3 Joints",
                 Toast.LENGTH_SHORT).show();
 
     }

@@ -21,15 +21,58 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     private Button button1;
     private SeekBar sb;
     public static int count4;
+    public Button B1;
+    public Button B2;
+    public Button B3;
+    public Button B4;
+    public Button B5;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey4);
         udc = new UserDataCollector();
         setTitle("Interface 4");
     }
+    public void buttonselection4(View view) {
+        B1 = (Button) view.findViewById(R.id.bodybtn1);
+        B2 = (Button) view.findViewById(R.id.bodybtn2);
+        B3 = (Button) view.findViewById(R.id.bodybtn3);
+        B4 = (Button) view.findViewById(R.id.bodybtn4);
+        B5 = (Button) view.findViewById(R.id.bodybtn5);
 
 
-    public void verticalscroll(View view)
+        int id = view.getId();
+        switch (id) {
+            case R.id.bodybtn1:
+                udc.writeToSDFile("Back Pain Survery Started");
+                verticalscroll();
+
+                break;
+            case R.id.bodybtn2:
+                udc.writeToSDFile("Right Hip Survery Started");
+                verticalscroll();
+
+                break;
+            case R.id.bodybtn3:
+                udc.writeToSDFile("Left Hip Survery Started");
+                verticalscroll();
+
+                break;
+            case R.id.bodybtn4:
+                udc.writeToSDFile("Right Knee Survey Started");
+                verticalscroll();
+
+                break;
+            case R.id.bodybtn5:
+                udc.writeToSDFile("Left Knee Survey Started");
+                verticalscroll();
+
+                break;
+
+        }
+
+    }
+
+    public void verticalscroll()
     {
     AlertDialog.Builder alert = new AlertDialog.Builder(this);
     AlertDialog dialog;
@@ -92,7 +135,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
     }
         else {
-            Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+            Toast.makeText(this.getApplicationContext(), "Please Complete Pain Input for 3 Joints",
                     Toast.LENGTH_SHORT).show();
 
         }
