@@ -23,4 +23,6 @@ public class infopage6 extends AppCompatActivity implements View.OnClickListener
         Intent intent = new Intent(this, gotoSurveyActivity.class);
         startActivity(intent);
     }
+    public void onBackPressed() {}
+
 }

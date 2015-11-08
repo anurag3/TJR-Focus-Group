@@ -26,20 +26,57 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     private RadioButton RB6;
     private Button button1;
     Boolean b = false;
+    public Button B1;
+    public Button B2;
+    public Button B3;
+    public Button B4;
+    public Button B5;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey2);
         udc= new UserDataCollector();
         setTitle("Interface 2");
-        //final ActionBar supportAB = getSupportActionBar();
-        //supportAB.setTitle("R E L A X");
     }
 
-    public void verticaltap(View view) {
+    public void buttonselection2(View view) {
+        B1 = (Button) view.findViewById(R.id.bodybtn1);
+        B2 = (Button) view.findViewById(R.id.bodybtn2);
+        B3 = (Button) view.findViewById(R.id.bodybtn3);
+        B4 = (Button) view.findViewById(R.id.bodybtn4);
+        B5 = (Button) view.findViewById(R.id.bodybtn5);
+
+
+        int id=view.getId();
+        switch(id) {
+            case R.id.bodybtn1:
+                udc.writeToSDFile("Back_Pain_Survery_Started");
+                verticaltap();
+                break;
+            case R.id.bodybtn2:
+                udc.writeToSDFile("Right_Hip_Survery_Started");
+                verticaltap();
+                break;
+            case R.id.bodybtn3:
+                udc.writeToSDFile("Left_Hip_Survery_Started");
+                verticaltap();
+                break;
+            case R.id.bodybtn4:
+                udc.writeToSDFile("Right_Knee_Survey_Started");
+                verticaltap();
+                break;
+            case R.id.bodybtn5:
+                udc.writeToSDFile("Left_Knee_Survey_Started");
+                verticaltap();
+                break;
+
+        }
+    }
+
+    public void verticaltap() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final AlertDialog dialog;
-        alert.setTitle("Pain Survey");
+        alert.setTitle("Pain Survey 2");
 
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -98,7 +135,6 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
                 }
 
                 if (b) {
-                    //surveyscalls();
                     dialog.dismiss();
                 }
             }
@@ -161,4 +197,5 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         RB5.setChecked(false);
         RB6.setChecked(false);
     }
+    public void onBackPressed() {}
 }

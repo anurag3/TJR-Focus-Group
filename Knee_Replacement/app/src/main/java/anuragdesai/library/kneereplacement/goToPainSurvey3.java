@@ -88,5 +88,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
 
     }
+    public void onBackPressed() {}
+
 }
 

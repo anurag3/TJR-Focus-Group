@@ -37,12 +37,12 @@ public class taptap6button1 extends AppCompatActivity implements View.OnClickLis
 
 
             if (i == 1) {
-                taptap6button1.setBackgroundColor(Color.GREEN);
+                taptap6button1.setBackgroundColor(Color.parseColor("#FF669900"));
                 Toast.makeText(M.getApplicationContext(), "No Hurt",
                         Toast.LENGTH_SHORT).show();
             }
             if (i == 2) {
-                taptap6button1.setBackgroundColor(Color.YELLOW);
+                taptap6button1.setBackgroundColor(Color.parseColor("#FF99CC00"));
                 Toast.makeText(M.getApplicationContext(), "Hurts Little Bit",
                         Toast.LENGTH_SHORT).show();
             }
@@ -52,12 +52,12 @@ public class taptap6button1 extends AppCompatActivity implements View.OnClickLis
                         Toast.LENGTH_SHORT).show();
             }
             if (i == 4) {
-                taptap6button1.setBackgroundColor(Color.YELLOW);
+                taptap6button1.setBackgroundColor(Color.parseColor("#FFFFBB33"));
                 Toast.makeText(M.getApplicationContext(), "Hurts Even More",
                         Toast.LENGTH_SHORT).show();
             }
             if (i == 5) {
-                taptap6button1.setBackgroundColor(Color.YELLOW);
+                taptap6button1.setBackgroundColor(Color.parseColor("#FFFF8800"));
                 Toast.makeText(M.getApplicationContext(), "Hurts Whole Lot",
                         Toast.LENGTH_SHORT).show();
             }

@@ -26,6 +26,11 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     private RadioButton RB6;
     private Button button1;
     Boolean b = false;
+    public Button B1;
+    public Button B2;
+    public Button B3;
+    public Button B4;
+    public Button B5;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +39,43 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         setTitle("Interface 1");
 
     }
+    public void buttonselection1(View view) {
+        B1 = (Button) view.findViewById(R.id.bodybtn11);
+        B2 = (Button) view.findViewById(R.id.bodybtn21);
+        B3 = (Button) view.findViewById(R.id.bodybtn31);
+        B4 = (Button) view.findViewById(R.id.bodybtn41);
+        B5 = (Button) view.findViewById(R.id.bodybtn51);
 
 
-    public void horizontaltap(View view) {
+        int id=view.getId();
+        switch(id) {
+            case R.id.bodybtn11:
+                udc.writeToSDFile("Back_Pain_Survery_Started");
+
+                horizontaltap();
+                break;
+            case R.id.bodybtn21:
+                udc.writeToSDFile("Right_Hip_Survery_Started");
+                horizontaltap();
+                break;
+            case R.id.bodybtn31:
+                udc.writeToSDFile("Left_Hip_Survery_Started");
+                horizontaltap();
+                break;
+            case R.id.bodybtn41:
+                udc.writeToSDFile("Right_Knee_Survey_Started");
+                horizontaltap();
+                break;
+            case R.id.bodybtn51:
+                udc.writeToSDFile("Left_Knee_Survey_Started");
+                horizontaltap();
+                break;
+
+        }
+    }
+
+
+    public void horizontaltap() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final AlertDialog dialog;
         alert.setTitle("Pain Survey 1");
@@ -158,5 +197,6 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         RB6.setChecked(false);
     }
 
+    public void onBackPressed() {}
 
 }

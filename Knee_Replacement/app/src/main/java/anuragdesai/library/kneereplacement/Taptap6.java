@@ -30,5 +30,8 @@ public class Taptap6 extends AppCompatActivity {
         Button taptap6buttonnxt = (Button) this.findViewById(R.id.interface6next);
         taptap6buttonnxt.setOnClickListener(new taptap6buttonnxt(taptap6buttonnxt,this));
     }
+
+    public void onBackPressed() {}
+
 }
 

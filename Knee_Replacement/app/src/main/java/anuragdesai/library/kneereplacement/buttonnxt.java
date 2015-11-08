@@ -38,24 +38,15 @@ public class buttonnxt extends AppCompatActivity implements OnClickListener {
         //System.out.println(b1);
         if(b1!=0)
             //System.out.println("1");
-            udc.writeToSDFile("Interface 6 Opened");
 
         udc.writeToSDFile("Back_Pain_Level = "+sb1);
         if(b2!=0)
-            udc.writeToSDFile("Interface 6 Opened");
-
         udc.writeToSDFile("Right_Hip_Pain_Level = "+sb2);
         if(b3!=0)
-            udc.writeToSDFile("Interface 6 Opened");
-
         udc.writeToSDFile("Left_Hip_Pain_Level = "+sb3);
         if(b4!=0)
-            udc.writeToSDFile("Interface 6 Opened");
-
         udc.writeToSDFile("Right_Knee_Pain_Level = "+sb4);
         if(b5!=0)
-            udc.writeToSDFile("Interface 6 Opened");
-
         udc.writeToSDFile("Left_Knee_Pain_Level = "+sb5);
 
         Intent intent = new Intent(M , infopage5.class);

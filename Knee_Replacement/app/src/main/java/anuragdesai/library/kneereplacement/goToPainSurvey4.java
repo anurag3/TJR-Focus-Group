@@ -18,7 +18,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
 
     private UserDataCollector udc;
     private Button button1;
-
+    private SeekBar sb;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +38,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
             this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     View v = inflater.inflate(R.layout.popup4, null);
 
-    final SeekBar sb = (SeekBar) v.findViewById(R.id.VerticalSeekBar1);
+    sb = (SeekBar) v.findViewById(R.id.VerticalSeekBar1);
 
     alert.setView(v);
     alert.setPositiveButton("Save",
@@ -91,5 +91,29 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         //sa.surveysRotate();
         startActivity(intent);
 
+
     }
+    public void onface(View v)
+    {
+    String facenumber = (String) v.getTag();
+
+    switch (facenumber)
+    {
+        case "1" : sb.setProgress(97);
+                    break;
+        case "2" : sb.setProgress(77);
+                    break;
+        case "3" : sb.setProgress(58);
+                    break;
+        case "4" : sb.setProgress(40);
+                    break;
+        case "5" : sb.setProgress(22);
+                    break;
+        case "6" : sb.setProgress(5);
+                    break;
+
+    }
+}
+    public void onBackPressed() {}
+
 }

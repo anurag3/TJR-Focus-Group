@@ -24,4 +24,6 @@ public class infopage1 extends AppCompatActivity implements View.OnClickListener
         startActivity(intent);
 
     }
+    public void onBackPressed() {}
+
 }
