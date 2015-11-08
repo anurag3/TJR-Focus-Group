@@ -24,14 +24,14 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     private RadioButton RB4;
     private RadioButton RB5;
     private RadioButton RB6;
-    private Button button1;
+    public Button button1;
     Boolean b = false;
     public Button B1;
     public Button B2;
     public Button B3;
     public Button B4;
     public Button B5;
-
+    public static int count1;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
@@ -51,23 +51,32 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         switch(id) {
             case R.id.bodybtn11:
                 udc.writeToSDFile("Back_Pain_Survery_Started");
-
+                count1++;
+                System.out.println(count1);
                 horizontaltap();
                 break;
             case R.id.bodybtn21:
                 udc.writeToSDFile("Right_Hip_Survery_Started");
+                count1++;
+                System.out.println(count1);
                 horizontaltap();
                 break;
             case R.id.bodybtn31:
                 udc.writeToSDFile("Left_Hip_Survery_Started");
+                count1++;
+                System.out.println(count1);
                 horizontaltap();
                 break;
             case R.id.bodybtn41:
                 udc.writeToSDFile("Right_Knee_Survey_Started");
+                count1++;
+                System.out.println(count1);
                 horizontaltap();
                 break;
             case R.id.bodybtn51:
                 udc.writeToSDFile("Left_Knee_Survey_Started");
+                count1++;
+                System.out.println(count1);
                 horizontaltap();
                 break;
 
@@ -150,10 +159,17 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     }
     public void onClick(View view) {
 
-        button1 = (Button) this.findViewById(R.id.interface1next);
-        button1.setOnClickListener(this);
-        Intent intent = new Intent(this,infopage1.class);
-        startActivity(intent);
+        if(count1>=3) {
+            button1 = (Button) this.findViewById(R.id.interface1next);
+            button1.setOnClickListener(this);
+            Intent intent = new Intent(this, infopage1.class);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+                    Toast.LENGTH_SHORT).show();
+
+        }
 
     }
 

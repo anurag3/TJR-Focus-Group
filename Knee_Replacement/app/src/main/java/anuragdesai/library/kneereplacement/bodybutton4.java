@@ -18,6 +18,8 @@ public class bodybutton4 extends AppCompatActivity implements OnClickListener{
     public UserDataCollector udc;
     public String tyu;
     Taptap3 M;
+    Button button1;
+
 
 
 
@@ -52,7 +54,10 @@ public class bodybutton4 extends AppCompatActivity implements OnClickListener{
         }
         }
         buttonnxt.b4=i;
-        /*
+        Taptap3.count5++;
+        System.out.println("Count5 ="+Taptap3.count5);
+
+             /*
         System.out.println(i);
         tyu = String.valueOf(i);
         udc = new UserDataCollector();

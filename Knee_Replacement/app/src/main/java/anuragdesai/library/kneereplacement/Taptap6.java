@@ -9,6 +9,8 @@ import android.widget.Button;
  */
 public class Taptap6 extends AppCompatActivity {
 
+    public static int count6;
+
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);

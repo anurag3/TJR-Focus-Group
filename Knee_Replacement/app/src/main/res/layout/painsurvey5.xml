@@ -71,7 +71,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:textStyle="bold"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            android:visibility="visible" />
 
 
     </RelativeLayout>

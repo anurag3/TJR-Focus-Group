@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 /**
  * Created by Anurag on 11/2/2015.
@@ -19,7 +20,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     private UserDataCollector udc;
     private Button button1;
     private SeekBar sb;
-
+    public static int count4;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey4);
@@ -63,7 +64,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
                     }
                     udc.writeToSDFile("Survey 4 submitted");
                     udc.writeToSDFile("Survey 4 result: " + s);
-
+                    count4++;
                 }
             }
 
@@ -78,18 +79,23 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
 
     );
 
-
     dialog=alert.create();
     dialog.show();
 
 }
     public void onClick(View view) {
-        //gotoSurveyActivity sa = new gotoSurveyActivity();
+        if(count4>=3) {   //gotoSurveyActivity sa = new gotoSurveyActivity();
         button1 = (Button) this.findViewById(R.id.interface4next);
         button1.setOnClickListener(this);
-        Intent intent = new Intent(this,infopage4.class);
+        Intent intent = new Intent(this, infopage4.class);
         //sa.surveysRotate();
         startActivity(intent);
+    }
+        else {
+            Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+                    Toast.LENGTH_SHORT).show();
+
+        }
 
 
     }

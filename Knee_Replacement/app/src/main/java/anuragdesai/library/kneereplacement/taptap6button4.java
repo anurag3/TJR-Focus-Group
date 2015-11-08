@@ -71,6 +71,8 @@ public class taptap6button4 extends AppCompatActivity implements View.OnClickLis
         bNext.inputB1(i);
         */
         taptap6buttonnxt.b4=i;
+        Taptap6.count6++;
+        System.out.println("Count6 ="+Taptap6.count6);
         /*
         System.out.println(i);
         tyu = String.valueOf(i);

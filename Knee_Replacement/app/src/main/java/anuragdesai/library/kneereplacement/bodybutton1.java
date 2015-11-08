@@ -19,6 +19,8 @@ public class bodybutton1 extends AppCompatActivity implements OnClickListener{
     public UserDataCollector udc;
     public String tyu;
     Taptap3 M;
+    Button button;
+
 
     public bodybutton1(Button button1,Taptap3 M) {
         this.button1= button1;
@@ -78,6 +80,8 @@ public class bodybutton1 extends AppCompatActivity implements OnClickListener{
         bNext.inputB1(i);
         */
         buttonnxt.b1=i;
+        Taptap3.count5++;
+        System.out.println("Count5 ="+Taptap3.count5);
         /*
         System.out.println(i);
         tyu = String.valueOf(i);

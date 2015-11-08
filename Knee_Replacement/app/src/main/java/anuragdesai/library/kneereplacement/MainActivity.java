@@ -99,8 +99,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         button1.setOnClickListener(this);
        // button1.setOnClickListener((View.OnClickListener) Intent intent = new Intent(this, Taptap3.class));
         if( et.getText().toString().trim().equals("")){
-            Toast.makeText(this.getApplicationContext(), "Please Enter Patient ID",
-                    Toast.LENGTH_SHORT).show();
+         //   Toast.makeText(this.getApplicationContext(), "Please Enter Patient ID",
+           //         Toast.LENGTH_SHORT).show();
 
             /**
              *   You can Toast a message here that the Username is Empty

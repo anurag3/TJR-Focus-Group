@@ -31,6 +31,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     public Button B3;
     public Button B4;
     public Button B5;
+    public static int count2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,32 +48,37 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         B5 = (Button) view.findViewById(R.id.bodybtn5);
 
 
-        int id=view.getId();
-        switch(id) {
+        int id = view.getId();
+        switch (id) {
             case R.id.bodybtn1:
                 udc.writeToSDFile("Back_Pain_Survery_Started");
                 verticaltap();
+                count2++;
                 break;
             case R.id.bodybtn2:
                 udc.writeToSDFile("Right_Hip_Survery_Started");
                 verticaltap();
+                count2++;
                 break;
             case R.id.bodybtn3:
                 udc.writeToSDFile("Left_Hip_Survery_Started");
                 verticaltap();
+                count2++;
                 break;
             case R.id.bodybtn4:
                 udc.writeToSDFile("Right_Knee_Survey_Started");
                 verticaltap();
+                count2++;
                 break;
             case R.id.bodybtn5:
                 udc.writeToSDFile("Left_Knee_Survey_Started");
                 verticaltap();
+                count2++;
                 break;
 
         }
-    }
 
+    }
     public void verticaltap() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final AlertDialog dialog;
@@ -144,13 +150,19 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
 
 
     public void onClick(View view) {
-
+        if(count2>=3) {
         button1 = (Button) this.findViewById(R.id.interface2next);
         button1.setOnClickListener(this);
-        Intent intent = new Intent(this,infopage2.class);
+        Intent intent = new Intent(this, infopage2.class);
         startActivity(intent);
+    }
+    else {
+        Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+                Toast.LENGTH_SHORT).show();
 
     }
+
+}
 
 
 

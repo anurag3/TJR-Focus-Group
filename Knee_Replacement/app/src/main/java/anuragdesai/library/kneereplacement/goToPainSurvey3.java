@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 /**
  * Created by Anurag on 11/2/2015.
@@ -17,7 +18,7 @@ import android.widget.SeekBar;
 public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickListener {
 
     private UserDataCollector udc;
-
+    public static int count3;
     private Button button1;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         udc.writeToSDFile("Survey 3 submitted");
                         udc.writeToSDFile("Survey 3 result: " + s);
                         //if(i%2==1)
-
+                        count3++;
                         //i++;
 
                     }
@@ -80,12 +81,20 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
     }
     public void onClick(View view) {
-        //gotoSurveyActivity sa = new gotoSurveyActivity();
-        button1 = (Button) this.findViewById(R.id.interface3next);
-        button1.setOnClickListener(this);
-        Intent intent = new Intent(this,infopage3.class);
-        //sa.surveysRotate();
-        startActivity(intent);
+        if(count3>=3) {
+            //gotoSurveyActivity sa = new gotoSurveyActivity();
+
+            button1 = (Button) this.findViewById(R.id.interface3next);
+            button1.setOnClickListener(this);
+            Intent intent = new Intent(this, infopage3.class);
+            //sa.surveysRotate();
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this.getApplicationContext(), "Please complete Pain Input for 3 joints",
+                    Toast.LENGTH_SHORT).show();
+
+        }
 
     }
     public void onBackPressed() {}

@@ -74,6 +74,9 @@ public void onClick(View view) {
         bNext.inputB1(i);
         */
         taptap6buttonnxt.b2=i;
+
+        Taptap6.count6++;
+        System.out.println("Count6 ="+Taptap6.count6);
         /*
         System.out.println(i);
         tyu = String.valueOf(i);
