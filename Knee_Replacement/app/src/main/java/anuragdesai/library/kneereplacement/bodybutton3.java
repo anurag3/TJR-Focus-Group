@@ -25,6 +25,8 @@ public class bodybutton3 extends AppCompatActivity implements OnClickListener{
     public bodybutton3(Button button3,Taptap3 M) {
         this.button3= button3;
         this.M = M;
+
+
     }
 
 
@@ -58,6 +60,7 @@ public class bodybutton3 extends AppCompatActivity implements OnClickListener{
         buttonnxt.b3=i;
         Taptap3.count5++;
         System.out.println("Count5 ="+Taptap3.count5);
+
 
 
         /*

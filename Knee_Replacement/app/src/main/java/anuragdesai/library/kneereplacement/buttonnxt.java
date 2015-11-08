@@ -7,6 +7,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Anurag on 10/22/2015.
  */
@@ -41,7 +44,27 @@ public class buttonnxt extends AppCompatActivity implements OnClickListener {
             udc.checkExternalMedia();
             //System.out.println("outside1");
             //System.out.println(b1);
-            if (Taptap3.count5>=3) {
+            List<Integer> arr= new ArrayList<Integer>();
+            arr.add(b1);
+            arr.add(b2);
+            arr.add(b3);
+            arr.add(b4);
+            arr.add(b5);
+            System.out.println(arr);
+
+            for(int i=0;i<arr.size();i++)
+            {
+                if(arr.get(i)==0)
+                {
+                    arr.remove(i);
+                    i=0;
+                }
+
+            }
+System.out.println(arr);
+
+            if (arr.size()>=3) {
+
                 if (b1 != 0)
                     //System.out.println("1");
 

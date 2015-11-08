@@ -24,6 +24,8 @@ public class bodybutton5 extends AppCompatActivity implements OnClickListener{
     public bodybutton5(Button button5,Taptap3 M) {
         this.button5= button5;
         this.M = M;
+
+
     }
 
 
@@ -54,6 +56,9 @@ public class bodybutton5 extends AppCompatActivity implements OnClickListener{
         buttonnxt.b5=i;
         Taptap3.count5++;
         System.out.println("Count5 ="+Taptap3.count5);
+
+    }
+
         /*
         System.out.println(i);
         tyu = String.valueOf(i);
@@ -61,4 +66,4 @@ public class bodybutton5 extends AppCompatActivity implements OnClickListener{
         udc.checkExternalMedia();
         udc.writeToSDFile("Left_Ankle_Pain_Level = "+tyu);
     */
-    }}
+    }

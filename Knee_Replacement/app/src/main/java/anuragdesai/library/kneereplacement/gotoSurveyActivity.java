@@ -44,7 +44,7 @@ public class gotoSurveyActivity extends AppCompatActivity{
             System.out.println(dataList);
             flag++;
         }
-
+        
 
             switch (dataList.get(i))
             {
@@ -96,7 +96,7 @@ public class gotoSurveyActivity extends AppCompatActivity{
                     i=0;
                    // resetpage rp = new resetpage();
                     //Test for github
-                    Intent intent = new Intent(this,MainActivity.class);
+                    Intent intent = new Intent(this,thankyou.class);
                     startActivity(intent, null);
             }}
 

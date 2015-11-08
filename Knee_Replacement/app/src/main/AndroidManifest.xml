@@ -58,6 +58,9 @@
         <activity
             android:name=".infopage6">
         </activity>
+        <activity
+            android:name=".thankyou">
+        </activity>
 
     </application>
 
