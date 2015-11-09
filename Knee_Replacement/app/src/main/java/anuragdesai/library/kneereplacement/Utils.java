@@ -2,6 +2,11 @@ package anuragdesai.library.kneereplacement;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Joshua on 11/9/2015.
@@ -26,6 +31,23 @@ public class Utils {
             case 6:
                 return Color.RED;
 
+        }
+    }
+
+    public static class buttonCounter{
+        List<Button> buttons;
+        public buttonCounter(){
+            buttons = new ArrayList<>();
+        }
+
+        public void recordValueStored(Button button){
+            if(!buttons.contains(button)){
+                buttons.add(button);
+            }
+        }
+
+        public boolean areButtonsStored(int count){
+            return buttons.size() >= count;
         }
     }
 }

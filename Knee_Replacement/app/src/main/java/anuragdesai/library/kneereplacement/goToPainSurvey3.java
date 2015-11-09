@@ -28,19 +28,24 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
     public Button B3;
     public Button B4;
     public Button B5;
-    public List<Integer> arr= new ArrayList<Integer>();
+    public List<Integer> arr = new ArrayList<Integer>();
     public int a1;
     public int a2;
     public int a3;
     public int a4;
     public int a5;
+    private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey3);
         udc = new UserDataCollector();
         setTitle("Interface 3");
+        button1 = (Button) this.findViewById(R.id.interface3next);
+        button1.setOnClickListener(this);
+        button1.setEnabled(false);
     }
+
     public void buttonselection3(View view) {
         B1 = (Button) view.findViewById(R.id.bodybtn1);
         B2 = (Button) view.findViewById(R.id.bodybtn2);
@@ -85,6 +90,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         }
 
     }
+
     public void horizontalscroll(final Button button) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         AlertDialog dialog;
@@ -126,7 +132,12 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         udc.writeToSDFile("Survey 3 submitted");
                         udc.writeToSDFile("Survey 3 result: " + s);
                         button.setBackgroundColor(colorToChangeTo);
-
+                        buttonCounter.recordValueStored(button);
+                        if (buttonCounter.areButtonsStored(3)) {
+                            button1.setEnabled(true);
+                        } else {
+                            button1.setEnabled(false);
+                        }
 
                     }
                 });
@@ -143,33 +154,16 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
 
     }
+
     public void onClick(View view) {
-        for(int i=0;i<arr.size();i++)
-        {
-            if(arr.get(i)==0)
-            {
-                arr.remove(i);
-                i=0;
-            }
-
-        }
-
-        if(arr.size()>=3)
-        {
-            button1 = (Button) this.findViewById(R.id.interface3next);
-            button1.setOnClickListener(this);
-            Intent intent = new Intent(this, infopage3.class);
-            //sa.surveysRotate();
-            startActivity(intent);
-        }
-        else {
-            Toast.makeText(this.getApplicationContext(), "Please Complete Pain Input for 3 Joints",
-                    Toast.LENGTH_SHORT).show();
-
-        }
+        Intent intent = new Intent(this, infopage3.class);
+        //sa.surveysRotate();
+        startActivity(intent);
 
     }
-    public void onBackPressed() {}
+
+    public void onBackPressed() {
+    }
 
 }
 

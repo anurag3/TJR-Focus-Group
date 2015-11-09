@@ -35,18 +35,22 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     public Button B4;
     public Button B5;
     public static int count2;
-    public List<Integer> arr= new ArrayList<Integer>();
+    public List<Integer> arr = new ArrayList<Integer>();
     public int a1;
     public int a2;
     public int a3;
     public int a4;
     public int a5;
+    private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey2);
-        udc= new UserDataCollector();
+        udc = new UserDataCollector();
         setTitle("Interface 2");
+        button1 = (Button) this.findViewById(R.id.interface2next);
+        button1.setOnClickListener(this);
+        button1.setEnabled(false);
     }
 
     public void buttonselection2(View view) {
@@ -94,6 +98,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         }
 
     }
+
     public void verticaltap(final Button button) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final AlertDialog dialog;
@@ -163,6 +168,13 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
                 }
 
                 if (b) {
+                    buttonCounter.recordValueStored(button);
+                    if (buttonCounter.areButtonsStored(3)) {
+                        button1.setEnabled(true);
+                    } else {
+                        button1.setEnabled(false);
+                    }
+
                     button.setBackgroundColor(colorToChangeTo);
                     dialog.dismiss();
                 }
@@ -174,40 +186,11 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     }
 
 
-
     public void onClick(View view) {
-
-        System.out.println(arr);
-        for(int i=0;i<arr.size();i++)
-        {
-            if(arr.get(i)==0)
-            {
-                arr.remove(i);
-                i=0;
-            }
-
-        }
-
-        if(arr.size()>=3)
-        {
-            System.out.println(arr);
-        button1 = (Button) this.findViewById(R.id.interface2next);
-        button1.setOnClickListener(this);
         Intent intent = new Intent(this, infopage2.class);
         startActivity(intent);
-    }
-    else {
-        Toast.makeText(this.getApplicationContext(), "Please Complete Pain Input for 3 Joints",
-                Toast.LENGTH_SHORT).show();
 
     }
-
-}
-
-
-
-
-
 
 
     //control all the button so that only one choice can be chosen
@@ -215,31 +198,37 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         resetAllRadio();
         RB1.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face2(View view) {
         resetAllRadio();
         RB2.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face3(View view) {
         resetAllRadio();
         RB3.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face4(View view) {
         resetAllRadio();
         RB4.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face5(View view) {
         resetAllRadio();
         RB5.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face6(View view) {
         resetAllRadio();
         RB6.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     private void resetAllRadio() {
         RB1.setChecked(false);
@@ -249,5 +238,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         RB5.setChecked(false);
         RB6.setChecked(false);
     }
-    public void onBackPressed() {}
+
+    public void onBackPressed() {
+    }
 }

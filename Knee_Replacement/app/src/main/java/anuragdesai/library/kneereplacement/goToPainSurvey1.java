@@ -36,22 +36,26 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public Button B4;
     public Button B5;
     public static int count1;
-    public List<Integer> arr= new ArrayList<Integer>();
+    public List<Integer> arr = new ArrayList<Integer>();
     public int a1;
     public int a2;
     public int a3;
     public int a4;
     public int a5;
-
+    private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
-        udc= new UserDataCollector();
+        udc = new UserDataCollector();
         setTitle("Interface 1");
+        button1 = (Button) this.findViewById(R.id.interface1next);
+        button1.setOnClickListener(this);
+        button1.setEnabled(false);
 
     }
+
     public void buttonselection1(View view) {
         B1 = (Button) view.findViewById(R.id.bodybtn1);
         B2 = (Button) view.findViewById(R.id.bodybtn2);
@@ -66,31 +70,31 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         arr.add(0);
 
 
-        int id=view.getId();
-        switch(id) {
+        int id = view.getId();
+        switch (id) {
             case R.id.bodybtn1:
                 udc.writeToSDFile("Back Pain Survery Started");
-                arr.set(0,1);
+                arr.set(0, 1);
                 horizontaltap(B1);
                 break;
             case R.id.bodybtn2:
                 udc.writeToSDFile("Right Hip Survery Started");
-                arr.set(1,1);
+                arr.set(1, 1);
                 horizontaltap(B2);
                 break;
             case R.id.bodybtn3:
                 udc.writeToSDFile("Left Hip Survery Started");
-                arr.set(2,1);
+                arr.set(2, 1);
                 horizontaltap(B3);
                 break;
             case R.id.bodybtn4:
                 udc.writeToSDFile("Right Knee Survey Started");
-                arr.set(3,1);
+                arr.set(3, 1);
                 horizontaltap(B4);
                 break;
             case R.id.bodybtn5:
                 udc.writeToSDFile("Left Knee Survey Started");
-                arr.set(4,1);
+                arr.set(4, 1);
                 horizontaltap(B5);
                 break;
 
@@ -167,7 +171,12 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
 
                 if (b) {
 
-
+                    buttonCounter.recordValueStored(button);
+                    if (buttonCounter.areButtonsStored(3)) {
+                        button1.setEnabled(true);
+                    } else {
+                        button1.setEnabled(false);
+                    }
                     button.setBackgroundColor(colorToChangeTo);
                     dialog.dismiss();
 
@@ -182,32 +191,9 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     }
 
 
-
     public void onClick(View view) {
-
-
-        for(int i=0;i<arr.size();i++)
-        {
-            if(arr.get(i)==0)
-            {
-                arr.remove(i);
-                i=0;
-            }
-
-        }
-
-        if(arr.size()>=3) {
-            System.out.println(arr);
-            button1 = (Button) this.findViewById(R.id.interface1next);
-            button1.setOnClickListener(this);
-            Intent intent = new Intent(this, infopage1.class);
-            startActivity(intent);
-        }
-        else {
-            Toast.makeText(this.getApplicationContext(), "Please Complete Pain Input for 3 Joints",
-                    Toast.LENGTH_SHORT).show();
-
-        }
+        Intent intent = new Intent(this, infopage1.class);
+        startActivity(intent);
 
     }
 
@@ -216,31 +202,37 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         resetAllRadio();
         RB1.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face2(View view) {
         resetAllRadio();
         RB2.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face3(View view) {
         resetAllRadio();
         RB3.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face4(View view) {
         resetAllRadio();
         RB4.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face5(View view) {
         resetAllRadio();
         RB5.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     public void face6(View view) {
         resetAllRadio();
         RB6.setChecked(true);
     }
+
     //control all the button so that only one choice can be chosen
     private void resetAllRadio() {
         RB1.setChecked(false);
@@ -251,6 +243,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         RB6.setChecked(false);
     }
 
-    public void onBackPressed() {}
+    public void onBackPressed() {
+    }
 
 }
