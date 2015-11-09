@@ -16,11 +16,16 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
     //public String tyu;
     Taptap6 M;
     int buttonNum = -1;
+    NextButtonController nextBtn;
+    boolean pressedYet = false;
+    static int buttonsPressed = 0;
 
-    public basetaptap6button(Button taptap6button, Taptap6 M, int buttonNum) {
+    public basetaptap6button(Button taptap6button, Taptap6 M, int buttonNum, NextButtonController nextBtn) {
         this.taptap6button = taptap6button;
         this.M = M;
         this.buttonNum = buttonNum;
+        this.nextBtn = nextBtn;
+        buttonsPressed = 0;
     }
 
 
@@ -31,8 +36,9 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
 
             if (i == 7)
                 i = 0;
-            if (i == 0)
+            if (i == 0) {
                 taptap6button.setBackgroundColor(Color.GRAY);
+            }
 
 
             if (i == 1) {
@@ -82,24 +88,35 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
         switch (buttonNum) {
             default:
             case 1:
-                taptap6buttonnxt.b1 = i;
+                nextBtn.b1 = i;
                 break;
             case 2:
-                taptap6buttonnxt.b2 = i;
+                nextBtn.b2 = i;
                 break;
             case 3:
-                taptap6buttonnxt.b3 = i;
+                nextBtn.b3 = i;
                 break;
             case 4:
-                taptap6buttonnxt.b4 = i;
+                nextBtn.b4 = i;
                 break;
             case 5:
-                taptap6buttonnxt.b5 = i;
+                nextBtn.b5 = i;
                 break;
         }
         //taptap6buttonnxt.b1=i;
-        Taptap6.count6++;
-        System.out.println("Count" + buttonNum + " =" + Taptap6.count6);
+        if(!pressedYet) {
+            buttonsPressed++;
+            pressedYet = true;
+        }
+
+        if(buttonsPressed >= 3){
+            nextBtn.setButtonEnabled(true);
+        }
+        else{
+            nextBtn.setButtonEnabled(false);
+        }
+
+        System.out.println("Count" + buttonNum + " =" + buttonsPressed);
         /*
         System.out.println(i);
         tyu = String.valueOf(i);

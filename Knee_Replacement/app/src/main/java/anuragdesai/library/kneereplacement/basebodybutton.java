@@ -17,12 +17,15 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
     //public String tyu;
     Taptap3 M;
     int buttonNum = -1;
+    boolean pressedYet = false;
+    NextButtonController nextBtn = null;
 
 
-    public basebodybutton(Button button5, Taptap3 M, int buttonNum) {
-        this.button = button5;
+    public basebodybutton(Button button, Taptap3 M, int buttonNum, NextButtonController nextBtn) {
+        this.button = button;
         this.M = M;
         this.buttonNum = buttonNum;
+        this.nextBtn = nextBtn;
 
     }
 
@@ -34,8 +37,9 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
 
             if (i == 4)
                 i = 0;
-            if (i == 0)
+            if (i == 0) {
                 button.setBackgroundColor(Color.GRAY);
+            }
             if (i == 1) {
                 button.setBackgroundColor(Color.GREEN);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "No Hurt - Hurts Little Bit");
@@ -61,23 +65,34 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
         switch(buttonNum){
             default:
             case 1:
-                buttonnxt.b1 = i;
+                nextBtn.b1 = i;
                 break;
             case 2:
-                buttonnxt.b2 = i;
+                nextBtn.b2 = i;
                 break;
             case 3:
-                buttonnxt.b3 = i;
+                nextBtn.b3 = i;
                 break;
             case 4:
-                buttonnxt.b4 = i;
+                nextBtn.b4 = i;
                 break;
             case 5:
-                buttonnxt.b5 = i;
+                nextBtn.b5 = i;
                 break;
         }
         //buttonnxt.b5 = i;
-        Taptap3.count5++;
+        if(!pressedYet) {
+            Taptap3.count5++;
+            pressedYet = true;
+        }
+
+        if(Taptap3.count5 >= 3){
+            nextBtn.setButtonEnabled(true);
+        }
+        else{
+            nextBtn.setButtonEnabled(false);
+        }
+
         System.out.println("Count" + buttonNum + " =" + Taptap3.count5);
 
     }
