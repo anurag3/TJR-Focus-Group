@@ -19,15 +19,15 @@ public class Taptap6 extends AppCompatActivity {
 
 
         Button taptap6button1 = (Button) this.findViewById(R.id.bodybtn1);
-        taptap6button1.setOnClickListener(new taptap6button1(taptap6button1,this));
+        taptap6button1.setOnClickListener(new basetaptap6button(taptap6button1,this, 1));
         Button taptap6button2 = (Button) this.findViewById(R.id.bodybtn2);
-        taptap6button2.setOnClickListener(new taptap6button2(taptap6button2,this));
+        taptap6button2.setOnClickListener(new basetaptap6button(taptap6button2,this, 2));
         Button taptap6button3 = (Button) this.findViewById(R.id.bodybtn3);
-        taptap6button3.setOnClickListener(new taptap6button3(taptap6button3,this));
+        taptap6button3.setOnClickListener(new basetaptap6button(taptap6button3,this, 3));
         Button taptap6button4 = (Button) this.findViewById(R.id.bodybtn4);
-        taptap6button4.setOnClickListener(new taptap6button4(taptap6button4,this));
+        taptap6button4.setOnClickListener(new basetaptap6button(taptap6button4,this, 4));
         Button taptap6button5 = (Button) this.findViewById(R.id.bodybtn5);
-        taptap6button5.setOnClickListener(new taptap6button5(taptap6button5,this));
+        taptap6button5.setOnClickListener(new basetaptap6button(taptap6button5,this, 5));
         System.out.println(this);
         Button taptap6buttonnxt = (Button) this.findViewById(R.id.interface6next);
         taptap6buttonnxt.setOnClickListener(new taptap6buttonnxt(taptap6buttonnxt,this));
