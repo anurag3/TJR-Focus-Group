@@ -41,9 +41,9 @@
         android:editable="true"
         android:textIsSelectable="false"
         android:width="200dp"
-        android:inputType="text"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:numeric="signed|integer|decimal" />
+        android:numeric="signed|integer|decimal"
+        android:inputType="number" />
 
 </RelativeLayout>

@@ -44,7 +44,7 @@ public class gotoSurveyActivity extends AppCompatActivity{
             System.out.println(dataList);
             flag++;
         }
-        
+
 
             switch (dataList.get(i))
             {
