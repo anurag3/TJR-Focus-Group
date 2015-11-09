@@ -45,7 +45,7 @@ public class gotoSurveyActivity extends AppCompatActivity{
             flag++;
         }
 
-
+//
             switch (dataList.get(i))
             {
                     case 1:

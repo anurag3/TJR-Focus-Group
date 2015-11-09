@@ -30,7 +30,7 @@ public class buttonnxt extends AppCompatActivity implements OnClickListener {
     }
 
 
-   // public void checker() {
+
 
 
         public void onClick (View v){
@@ -42,8 +42,8 @@ public class buttonnxt extends AppCompatActivity implements OnClickListener {
             String sb5 = String.valueOf(b5);
             udc = new UserDataCollector();
             udc.checkExternalMedia();
-            //System.out.println("outside1");
-            //System.out.println(b1);
+
+
             List<Integer> arr= new ArrayList<Integer>();
             arr.add(b1);
             arr.add(b2);
@@ -66,8 +66,6 @@ System.out.println(arr);
             if (arr.size()>=3) {
 
                 if (b1 != 0)
-                    //System.out.println("1");
-
                     udc.writeToSDFile("Back Pain Level = " + sb1);
                 if (b2 != 0)
                     udc.writeToSDFile("Right Hip Pain Level = " + sb2);

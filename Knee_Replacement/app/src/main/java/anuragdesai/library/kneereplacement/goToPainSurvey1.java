@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Anurag on 11/1/2015.
  */
@@ -32,6 +35,15 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public Button B4;
     public Button B5;
     public static int count1;
+    public List<Integer> arr= new ArrayList<Integer>();
+    public int a1;
+    public int a2;
+    public int a3;
+    public int a4;
+    public int a5;
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
@@ -46,37 +58,38 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         B4 = (Button) view.findViewById(R.id.bodybtn4);
         B5 = (Button) view.findViewById(R.id.bodybtn5);
 
+        arr.add(0);
+        arr.add(0);
+        arr.add(0);
+        arr.add(0);
+        arr.add(0);
+
 
         int id=view.getId();
         switch(id) {
             case R.id.bodybtn1:
-                udc.writeToSDFile("Back_Pain_Survery_Started");
-                count1++;
-                System.out.println(count1);
+                udc.writeToSDFile("Back Pain Survery Started");
+                arr.set(0,1);
                 horizontaltap();
                 break;
             case R.id.bodybtn2:
-                udc.writeToSDFile("Right_Hip_Survery_Started");
-                count1++;
-                System.out.println(count1);
+                udc.writeToSDFile("Right Hip Survery Started");
+                arr.set(1,1);
                 horizontaltap();
                 break;
             case R.id.bodybtn3:
-                udc.writeToSDFile("Left_Hip_Survery_Started");
-                count1++;
-                System.out.println(count1);
+                udc.writeToSDFile("Left Hip Survery Started");
+                arr.set(2,1);
                 horizontaltap();
                 break;
             case R.id.bodybtn4:
-                udc.writeToSDFile("Right_Knee_Survey_Started");
-                count1++;
-                System.out.println(count1);
+                udc.writeToSDFile("Right Knee Survey Started");
+                arr.set(3,1);
                 horizontaltap();
                 break;
             case R.id.bodybtn5:
-                udc.writeToSDFile("Left_Knee_Survey_Started");
-                count1++;
-                System.out.println(count1);
+                udc.writeToSDFile("Left Knee Survey Started");
+                arr.set(4,1);
                 horizontaltap();
                 break;
 
@@ -154,12 +167,27 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-
+        System.out.println(arr);
 
     }
+
+
+
     public void onClick(View view) {
 
-        if(count1>=3) {
+
+        for(int i=0;i<arr.size();i++)
+        {
+            if(arr.get(i)==0)
+            {
+                arr.remove(i);
+                i=0;
+            }
+
+        }
+
+        if(arr.size()>=3) {
+            System.out.println(arr);
             button1 = (Button) this.findViewById(R.id.interface1next);
             button1.setOnClickListener(this);
             Intent intent = new Intent(this, infopage1.class);

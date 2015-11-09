@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
             et.setError( "Patient ID is required!" );
 
         }else{
-            Intent intent = new Intent(this,gotoSurveyActivity.class);
+            Intent intent = new Intent(this,informrandomorder.class);
             startActivity(intent);
         }
 
