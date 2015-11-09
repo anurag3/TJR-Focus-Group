@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -70,34 +71,34 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
             case R.id.bodybtn1:
                 udc.writeToSDFile("Back Pain Survery Started");
                 arr.set(0,1);
-                horizontaltap();
+                horizontaltap(B1);
                 break;
             case R.id.bodybtn2:
                 udc.writeToSDFile("Right Hip Survery Started");
                 arr.set(1,1);
-                horizontaltap();
+                horizontaltap(B2);
                 break;
             case R.id.bodybtn3:
                 udc.writeToSDFile("Left Hip Survery Started");
                 arr.set(2,1);
-                horizontaltap();
+                horizontaltap(B3);
                 break;
             case R.id.bodybtn4:
                 udc.writeToSDFile("Right Knee Survey Started");
                 arr.set(3,1);
-                horizontaltap();
+                horizontaltap(B4);
                 break;
             case R.id.bodybtn5:
                 udc.writeToSDFile("Left Knee Survey Started");
                 arr.set(4,1);
-                horizontaltap();
+                horizontaltap(B5);
                 break;
 
         }
     }
 
 
-    public void horizontaltap() {
+    public void horizontaltap(final Button button) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final AlertDialog dialog;
         alert.setTitle("Pain Survey 1");
@@ -129,28 +130,36 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
 
         dialog = alert.create();
         dialog.show();
+
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int colorToChangeTo = 0;
                 udc.writeToSDFile("Survey 1 Submitted");
                 if (RB1.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: No Hurt");
                     b = true;
+                    colorToChangeTo = Utils.getColorForLevel(1);
                 } else if (RB2.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: Hurts Little Bit");
                     b = true;
+                    colorToChangeTo = Utils.getColorForLevel(2);
                 } else if (RB3.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: Hurts Little More");
                     b = true;
+                    colorToChangeTo = Utils.getColorForLevel(3);
                 } else if (RB4.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: Hurts Even More");
                     b = true;
+                    colorToChangeTo = Utils.getColorForLevel(4);
                 } else if (RB5.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: Hurts Whole Lot");
                     b = true;
+                    colorToChangeTo = Utils.getColorForLevel(5);
                 } else if (RB6.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: Hurts Worst");
                     b = true;
+                    colorToChangeTo = Utils.getColorForLevel(6);
                 } else {
                     Toast.makeText(getApplicationContext(), "Please Select A Pain Level",
                             Toast.LENGTH_SHORT).show();
@@ -159,6 +168,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
                 if (b) {
 
 
+                    button.setBackgroundColor(colorToChangeTo);
                     dialog.dismiss();
 
                 }

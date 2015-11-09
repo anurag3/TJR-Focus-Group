@@ -59,33 +59,33 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
             case R.id.bodybtn1:
                 udc.writeToSDFile("Back Pain Survery Started");
                 arr.set(0, 1);
-                horizontalscroll();
+                horizontalscroll(B1);
                 break;
             case R.id.bodybtn2:
                 udc.writeToSDFile("Right Hip Survery Started");
                 arr.set(1, 1);
-                horizontalscroll();
+                horizontalscroll(B2);
                 break;
             case R.id.bodybtn3:
                 udc.writeToSDFile("Left Hip Survery Started");
                 arr.set(2, 1);
-                horizontalscroll();
+                horizontalscroll(B3);
                 break;
             case R.id.bodybtn4:
                 udc.writeToSDFile("Right Knee Survey Started");
                 arr.set(3, 1);
-                horizontalscroll();
+                horizontalscroll(B4);
                 break;
             case R.id.bodybtn5:
                 udc.writeToSDFile("Left Knee Survey Started");
                 arr.set(4, 1);
-                horizontalscroll();
+                horizontalscroll(B5);
                 break;
 
         }
 
     }
-    public void horizontalscroll() {
+    public void horizontalscroll(final Button button) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         AlertDialog dialog;
         alert.setTitle("Pain Survey");
@@ -100,24 +100,32 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         alert.setPositiveButton("Save",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
+                        int colorToChangeTo = 0;
                         int progress = sb.getProgress();
                         String s;
 
                         if (progress <= 16.7) {
                             s = "No Hurt";
+                            colorToChangeTo = Utils.getColorForLevel(1);
                         } else if (progress <= 33.3) {
                             s = "Hurts Little Bit";
+                            colorToChangeTo = Utils.getColorForLevel(2);
                         } else if (progress <= 50) {
                             s = "Hurts Little More";
+                            colorToChangeTo = Utils.getColorForLevel(3);
                         } else if (progress <= 66.7) {
                             s = "Hurts Even More";
+                            colorToChangeTo = Utils.getColorForLevel(4);
                         } else if (progress <= 83.3) {
                             s = "Hurts Whole Lot";
+                            colorToChangeTo = Utils.getColorForLevel(5);
                         } else {
                             s = "Hurts Worst";
+                            colorToChangeTo = Utils.getColorForLevel(6);
                         }
                         udc.writeToSDFile("Survey 3 submitted");
                         udc.writeToSDFile("Survey 3 result: " + s);
+                        button.setBackgroundColor(colorToChangeTo);
 
 
                     }

@@ -11,8 +11,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,7 +56,26 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         tyu= et.getText();
         System.out.println(et.getText());
 
+        button1 = (Button) this.findViewById(R.id.button1);
+        button1.setOnClickListener(this);
+        button1.setEnabled(false);
 
+        et.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                button1.setEnabled(!s.toString().trim().equals(""));
+            }
+        });
 
 /*
         try {
@@ -95,8 +116,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         udc.checkExternalMedia();
         udc.writeToSDFile("Patient_ID = " + tyu);
 
-        button1 = (Button) this.findViewById(R.id.button1);
-        button1.setOnClickListener(this);
         if( et.getText().toString().trim().equals("")){
 
 
