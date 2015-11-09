@@ -11,28 +11,27 @@ import android.widget.Toast;
 /**
  * Created by Anurag on 10/21/2015.
  */
-public class bodybutton4 extends AppCompatActivity implements OnClickListener{
+public class bodybutton4 extends basebodybutton implements OnClickListener {
 
-    int i=0;
+    /*int i=0;
     Button button4;
     public UserDataCollector udc;
     public String tyu;
     Taptap3 M;
-    Button button1;
+    Button button1;*/
 
 
-
-
-    public bodybutton4(Button button4,Taptap3 M) {
-        this.button4= button4;
-        this.M = M;
+    public bodybutton4(Button button4, Taptap3 M) {
+        super(button4, M, 4);
+        //this.button4= button4;
+        //this.M = M;
 
 
     }
 
 
 
-
+/*
     public void onClick(View view) {
         {
             i++;
@@ -58,7 +57,7 @@ public class bodybutton4 extends AppCompatActivity implements OnClickListener{
         buttonnxt.b4=i;
         Taptap3.count5++;
         System.out.println("Count5 ="+Taptap3.count5);
-
+*/
 
              /*
         System.out.println(i);
@@ -66,5 +65,5 @@ public class bodybutton4 extends AppCompatActivity implements OnClickListener{
         udc = new UserDataCollector();
         udc.checkExternalMedia();
         udc.writeToSDFile("Right_Ankle_Pain_Level = "+tyu);
- */
-    }}
+ }*/
+}

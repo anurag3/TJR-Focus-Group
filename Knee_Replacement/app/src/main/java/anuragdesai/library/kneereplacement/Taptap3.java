@@ -21,30 +21,30 @@ public class Taptap3 extends AppCompatActivity{
 
         {
             Button button1 = (Button) this.findViewById(R.id.bodybtn1);
-            button1.setOnClickListener(new bodybutton1(button1, this));
+            button1.setOnClickListener(new basebodybutton(button1, this, 1));
 
 
         }
         {
             Button button2 = (Button) this.findViewById(R.id.bodybtn2);
-            button2.setOnClickListener(new bodybutton2(button2, this));
+            button2.setOnClickListener(new basebodybutton(button2, this, 2));
 
 
         }
         {
             Button button3 = (Button) this.findViewById(R.id.bodybtn3);
-            button3.setOnClickListener(new bodybutton3(button3, this));
+            button3.setOnClickListener(new basebodybutton(button3, this, 3));
 
 
         }
         {
             Button button4 = (Button) this.findViewById(R.id.bodybtn4);
-            button4.setOnClickListener(new bodybutton4(button4, this));
+            button4.setOnClickListener(new basebodybutton(button4, this, 4));
 
         }
         {
             Button button5 = (Button) this.findViewById(R.id.bodybtn5);
-            button5.setOnClickListener(new bodybutton5(button5, this));
+            button5.setOnClickListener(new basebodybutton(button5, this, 5));
 
         }
         {

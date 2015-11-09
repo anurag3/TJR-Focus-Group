@@ -11,26 +11,26 @@ import android.widget.Toast;
 /**
  * Created by Anurag on 10/21/2015.
  */
-public class bodybutton3 extends AppCompatActivity implements OnClickListener{
+public class bodybutton3 extends basebodybutton implements OnClickListener {
 
-    int i=0;
+    /*int i=0;
     Button button3;
     public UserDataCollector udc;
     public String tyu;
     Taptap3 M;
-    Button button1;
+    Button button1;*/
 
 
-
-    public bodybutton3(Button button3,Taptap3 M) {
-        this.button3= button3;
-        this.M = M;
+    public bodybutton3(Button button3, Taptap3 M) {
+        super(button3, M, 3);
+        //this.button3= button3;
+        //this.M = M;
 
 
     }
 
 
-
+/*
 
     public void onClick(View view) {
         {
@@ -60,7 +60,7 @@ public class bodybutton3 extends AppCompatActivity implements OnClickListener{
         buttonnxt.b3=i;
         Taptap3.count5++;
         System.out.println("Count5 ="+Taptap3.count5);
-
+*/
 
 
         /*
@@ -70,4 +70,5 @@ public class bodybutton3 extends AppCompatActivity implements OnClickListener{
         udc.checkExternalMedia();
         udc.writeToSDFile("Left_Quadriceps_Pain_Level = "+tyu);
     */
-    }}
+//}
+}

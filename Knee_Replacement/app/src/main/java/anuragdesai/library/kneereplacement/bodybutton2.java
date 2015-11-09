@@ -11,25 +11,26 @@ import android.widget.Toast;
 /**
  * Created by Anurag on 10/22/2015.
  */
-public class bodybutton2 extends AppCompatActivity implements OnClickListener{
-    int i=0;
+public class bodybutton2 extends basebodybutton implements OnClickListener {
+    /*int i=0;
     Button button2;
     public UserDataCollector udc;
     public String tyu;
     Taptap3 M;
-    Button button1;
+    Button button1;*/
 
 
-    public bodybutton2(Button button2,Taptap3 M) {
-        this.button2= button2;
-        this.M = M;
+    public bodybutton2(Button button2, Taptap3 M) {
+        super(button2, M, 2);
+        //this.button2= button2;
+        //this.M = M;
 
 
     }
 
 
 
-
+/*
     public void onClick(View view) {
         {
             i++;
@@ -58,7 +59,7 @@ public class bodybutton2 extends AppCompatActivity implements OnClickListener{
         Taptap3.count5++;
         System.out.println("Count5 ="+Taptap3.count5);
 
-
+*/
 
               /*
         System.out.println(i);
@@ -66,5 +67,5 @@ public class bodybutton2 extends AppCompatActivity implements OnClickListener{
         udc = new UserDataCollector();
         udc.checkExternalMedia();
         udc.writeToSDFile("Right_Quadriceps_Pain_Level = "+tyu);
-    */
-    }}
+    }*/
+}
