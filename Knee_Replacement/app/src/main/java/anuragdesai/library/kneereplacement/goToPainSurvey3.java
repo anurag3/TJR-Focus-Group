@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -21,7 +22,7 @@ import java.util.List;
 public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickListener {
 
     private UserDataCollector udc;
-    public static int count3;
+    private SeekBar sb;
     private Button button1;
     public Button B1;
     public Button B2;
@@ -29,18 +30,13 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
     public Button B4;
     public Button B5;
     public List<Integer> arr = new ArrayList<Integer>();
-    public int a1;
-    public int a2;
-    public int a3;
-    public int a4;
-    public int a5;
     private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey3);
         udc = new UserDataCollector();
-        setTitle("Interface 3");
+        setTitle("Horizontal Slide");
         button1 = (Button) this.findViewById(R.id.interface3next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
@@ -100,7 +96,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.popup3, null);
 
-        final SeekBar sb = (SeekBar) v.findViewById(R.id.seekBar);
+        sb = (SeekBar) v.findViewById(R.id.seekBar);
 
         alert.setView(v);
         alert.setPositiveButton("Save",
@@ -160,6 +156,51 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         //sa.surveysRotate();
         startActivity(intent);
 
+    }
+    public void onface(View v) {
+        String facenumber = (String) v.getTag();
+
+        switch (facenumber) {
+            case "6":
+                sb.setProgress(97);
+                break;
+            case "5":
+                sb.setProgress(77);
+                break;
+            case "4":
+                sb.setProgress(58);
+                break;
+            case "3":
+                sb.setProgress(40);
+                break;
+            case "2":
+                sb.setProgress(22);
+                break;
+            case "1":
+                sb.setProgress(5);
+                break;
+
+        }
+    }
+
+    public void showlegend(View view)
+    {
+        AlertDialog.Builder alert_legend = new AlertDialog.Builder(this);
+        AlertDialog dialog;
+        alert_legend.setTitle("Legends");
+
+        LayoutInflater inflater = (LayoutInflater)
+                this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflater.inflate(R.layout.legends, null);
+        alert_legend.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.dismiss();
+                    }
+                });
+        alert_legend.setView(v);
+        dialog = alert_legend.create();
+        dialog.show();
     }
 
     public void onBackPressed() {

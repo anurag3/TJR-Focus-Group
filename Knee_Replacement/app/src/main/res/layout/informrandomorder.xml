@@ -11,8 +11,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="@string/info_random"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="The Interfaces \nWill Be \nRandomly \nAssigned \nIn This Survey"
             android:id="@+id/textView1"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
@@ -26,5 +26,16 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:onClick="onClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/legends"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/button1" />
     </RelativeLayout>
 </LinearLayout>

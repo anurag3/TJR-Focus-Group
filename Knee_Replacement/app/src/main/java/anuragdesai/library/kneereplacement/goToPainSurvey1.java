@@ -35,7 +35,6 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public Button B3;
     public Button B4;
     public Button B5;
-    public static int count1;
     public List<Integer> arr = new ArrayList<Integer>();
     public int a1;
     public int a2;
@@ -49,7 +48,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
         udc = new UserDataCollector();
-        setTitle("Interface 1");
+        setTitle("Horizontal Tap");
         button1 = (Button) this.findViewById(R.id.interface1next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);

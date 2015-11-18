@@ -2,13 +2,218 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="110dp"
-        android:id="@+id/imageView8"
-        android:layout_gravity="top"
-        android:src="@drawable/faces3" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/faces"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
+
+        <Button
+            android:onClick="onface"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:tag="1"
+            android:id="@+id/button11"
+            android:layout_weight="1" />
+
+        <Button
+            android:onClick="onface"
+            android:tag="2"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button12"
+            android:layout_weight="1" />
+
+        <Button
+            android:onClick="onface"
+            android:tag="3"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button13"
+            android:layout_weight="1" />
+
+        <Button
+            android:onClick="onface"
+            android:tag="4"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button14"
+            android:layout_weight="1" />
+
+        <Button
+            android:onClick="onface"
+            android:tag="5"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button15"
+            android:layout_weight="1" />
+
+        <Button
+            android:onClick="onface"
+            android:tag="6"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button16"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="onface"
+            android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:onClick="onface"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="No\nHurt"
+                android:id="@+id/textView32"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="onface"
+            android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:tag="2"
+                android:onClick="onface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hurts\nLittile Bit"
+                android:id="@+id/textView33"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="onface"
+            android:tag="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:onClick="onface"
+                android:tag="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hurts Little \nMore"
+                android:id="@+id/textView34"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="onface"
+            android:tag="4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:onClick="onface"
+                android:tag="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hurts \nEven More"
+                android:id="@+id/textView35"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="onface"
+            android:tag="5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:onClick="onface"
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hurts \nWhole Lot"
+                android:id="@+id/textView36"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="onface"
+            android:tag="6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:onClick="onface"
+                android:tag="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Hurts \nWorst"
+                android:id="@+id/textView37"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+        </RelativeLayout>
+    </LinearLayout>
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

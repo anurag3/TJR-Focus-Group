@@ -42,7 +42,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey4);
         udc = new UserDataCollector();
-        setTitle("Interface 4");
+        setTitle("Vertical Slide");
         button1 = (Button) this.findViewById(R.id.interface4next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);

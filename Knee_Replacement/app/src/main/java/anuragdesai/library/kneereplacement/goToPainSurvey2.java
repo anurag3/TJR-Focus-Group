@@ -47,7 +47,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey2);
         udc = new UserDataCollector();
-        setTitle("Interface 2");
+        setTitle("Vertical Tap");
         button1 = (Button) this.findViewById(R.id.interface2next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);

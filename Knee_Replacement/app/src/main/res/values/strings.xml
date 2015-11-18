@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">KneeReplacement</string>
-
+    <string name="interface1">Horizontal Tap</string>
+    <string name="interface2">Horizontal Slide</string>
+    <string name="interface3">Horizontal Slide</string>
+    <string name="interface4">Vertical Slide</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_2">Activity2</string>
     <string name="patient_id">Patient ID</string>
+    <string name="info_random">The interfaces will be \nrandomly assigned in this survey</string>
+    <string name="legends">Standard legends for each survey \nwill be provided single button click</string>
+
 </resources>
