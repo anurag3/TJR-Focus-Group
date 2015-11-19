@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
-    <corners
-        android:topLeftRadius="100dp"
-        android:topRightRadius="100dp"
-        android:bottomLeftRadius="100dp"
-        android:bottomRightRadius="100dp"
-        />
+    <corners android:radius="100dp"
+        android:background="@drawable/ff5"/>
    <!-- <gradient
         android:gradientRadius="100"
         android:centerX="35%"
@@ -14,9 +10,8 @@
         android:endColor="#000000"
         android:type="radial"
         /> -->
-    <solid
-        android:color="#aeaeae"
-        />
+
+
     <padding
         android:left="0dp"
         android:top="0dp"

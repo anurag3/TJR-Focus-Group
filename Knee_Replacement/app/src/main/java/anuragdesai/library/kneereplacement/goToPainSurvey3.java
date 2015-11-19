@@ -129,11 +129,11 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         udc.writeToSDFile("Survey 3 result: " + s);
                         button.setBackgroundColor(colorToChangeTo);
                         buttonCounter.recordValueStored(button);
-                        if (buttonCounter.areButtonsStored(3)) {
+                        /*if (buttonCounter.areButtonsStored(3)) {
                             button1.setEnabled(true);
                         } else {
                             button1.setEnabled(false);
-                        }
+                        }*/
 
                     }
                 });

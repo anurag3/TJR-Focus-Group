@@ -5,15 +5,6 @@
     android:orientation="vertical">
 
     <Button
-        android:onClick="face6"
-        android:background="@android:color/transparent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No Hurt"
-        android:id="@+id/button8"
-        android:drawableLeft="@drawable/f111"/>
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button9"
@@ -21,5 +12,13 @@
         android:background="@android:color/transparent"
         android:text="No Hurt"
         android:drawableLeft="@drawable/f2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:background="@android:color/transparent"
+        android:text="Hurts Little"
+        android:drawableLeft="@drawable/ff2"/>
 
 </LinearLayout>

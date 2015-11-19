@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity3" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="60dp"
+        android:layout_height="343dp"
+        android:layout_marginLeft="5dp">
+
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkred">
+        <Button
+            android:onClick="face1"
+            android:background="@drawable/ff0"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button1"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkorange">
+        <Button
+            android:onClick="face2"
+            android:background="@drawable/ff1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button2"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/orange">
+        <Button
+            android:onClick="face3"
+            android:background="@drawable/ff2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button3"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/yellow">
+        <Button
+            android:onClick="face4"
+            android:background="@drawable/ff3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button4"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/green">
+        <Button
+            android:onClick="face5"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button5"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonshape" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkgreen">
+
+        <Button
+            android:onClick="face6"
+            android:background="@drawable/ff5"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:id="@+id/button6"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="10dp"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkred">
+        </RelativeLayout>
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkorange">
+        </RelativeLayout>
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/orange">
+        </RelativeLayout>
+        <RelativeLayout
+        android:clickable="true"
+        android:onClick="face4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/yellow">
+        </RelativeLayout>
+        <RelativeLayout
+        android:clickable="true"
+        android:onClick="face5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/green">
+        </RelativeLayout>
+        <RelativeLayout
+        android:clickable="true"
+        android:onClick="face6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/darkgreen">
+        </RelativeLayout>
+    </LinearLayout>
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkred">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hurts Worst"
+                android:id="@+id/textView20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkorange">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hurts Whole Lot"
+                android:id="@+id/textView22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/orange">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hurts Even More"
+                android:id="@+id/textView21" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/yellow">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hurts Little More"
+                android:id="@+id/textView23" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:onClick="face5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/green">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hurts a Little Bit"
+                android:id="@+id/textView24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:clickable="true"
+            android:onClick="face6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/darkgreen">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="No Hurt"
+                android:id="@+id/textView25" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
