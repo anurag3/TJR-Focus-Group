@@ -4,14 +4,16 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.TouchDelegate;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,15 +33,21 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
     public Button B5;
     public List<Integer> arr = new ArrayList<Integer>();
     private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
+    public Drawable d1;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey3);
         udc = new UserDataCollector();
         setTitle("Horizontal Slide");
-        button1 = (Button) this.findViewById(R.id.interface3next);
+       /* button1 = (Button) this.findViewById(R.id.interface3next);
         button1.setOnClickListener(this);
-        button1.setEnabled(false);
+        button1.setEnabled(false);*/
+        d1= getResources().getDrawable(R.drawable.roundbutton);
+
+
+
     }
 
     public void buttonselection3(View view) {
@@ -48,6 +56,8 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         B3 = (Button) view.findViewById(R.id.bodybtn3);
         B4 = (Button) view.findViewById(R.id.bodybtn4);
         B5 = (Button) view.findViewById(R.id.bodybtn5);
+
+
 
         arr.add(0);
         arr.add(0);
@@ -85,7 +95,9 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
         }
 
+
     }
+
 
     public void horizontalscroll(final Button button) {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -127,8 +139,13 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         }
                         udc.writeToSDFile("Survey 3 submitted");
                         udc.writeToSDFile("Survey 3 result: " + s);
-                        button.setBackgroundColor(colorToChangeTo);
+                       // button.setBackground(d1);
+                        d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
+                        button.setBackground(d1);
+
+                        //button.setBackgroundColor(colorToChangeTo);
                         buttonCounter.recordValueStored(button);
+
                         /*if (buttonCounter.areButtonsStored(3)) {
                             button1.setEnabled(true);
                         } else {
@@ -181,26 +198,6 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                 break;
 
         }
-    }
-
-    public void showlegend(View view)
-    {
-        AlertDialog.Builder alert_legend = new AlertDialog.Builder(this);
-        AlertDialog dialog;
-        alert_legend.setTitle("Legends");
-
-        LayoutInflater inflater = (LayoutInflater)
-                this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.legends, null);
-        alert_legend.setPositiveButton("Ok",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        dialog.dismiss();
-                    }
-                });
-        alert_legend.setView(v);
-        dialog = alert_legend.create();
-        dialog.show();
     }
 
     public void onBackPressed() {

@@ -220,6 +220,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekBar"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" />
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp" />
 </LinearLayout>

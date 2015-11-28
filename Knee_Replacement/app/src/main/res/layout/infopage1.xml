@@ -20,11 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Finished Interface 1 \nMove to Next"
+        android:text="Finished Interface 1 \nLet’s move to the next interface"
         android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="131dp"
+        android:layout_marginTop="133dp"
         android:textStyle="bold"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/infopage1next" />
 </RelativeLayout>

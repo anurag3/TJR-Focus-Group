@@ -46,7 +46,7 @@ public class gotoSurveyActivity extends AppCompatActivity{
         }
 
 //dataList.get(i)
-            switch (2)
+            switch (3)
             {
                     case 1:
                     udc.writeToSDFile("Interface 1 Opened");
