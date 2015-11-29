@@ -41,6 +41,7 @@
 
     <color name="default_button_color_pressed">#FF33B5E5</color>
     <color name="default_button_color">#FF33B5E5</color>
-    <color name="default_button_color_disabled">#FF33B5E5</color>
+    <color name="default_button_color_disabled">#FFFFFFFF</color>
+    <color name="default_button_color_disabled_border">#FF000000</color>
 
 </resources>

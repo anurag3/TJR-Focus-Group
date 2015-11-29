@@ -1,20 +1,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent" android:paddingLeft="5dp"
+    android:paddingRight="5dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="anuragdesai.library.kneereplacement.TransparentButtonText"
+    tools:context="anuragdesai.library.kneereplacement.goToPainSurvey2"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_button_a"
-        android:onClick=""
+        android:onClick="face1"
         android:clickable="true"
         android:focusable="true"
-        android:layout_margin="5dp" >
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layoutbutton1">
         <ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
@@ -28,16 +29,18 @@
             android:textSize="28sp"
             android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_button_b"
-        android:onClick=""
+        android:onClick="face2"
         android:clickable="true"
         android:focusable="true"
-        android:layout_margin="5dp" >
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layoutbutton2">
         <ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
@@ -51,16 +54,18 @@
             android:textSize="28sp"
             android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_button_c"
-        android:onClick=""
+        android:onClick="face3"
         android:clickable="true"
         android:focusable="true"
-        android:layout_margin="5dp" >
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layoutbutton3" >
         <ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
@@ -74,16 +79,18 @@
             android:textSize="28sp"
             android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_button_d"
-        android:onClick=""
+        android:onClick="face4"
         android:clickable="true"
         android:focusable="true"
-        android:layout_margin="5dp" >
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layoutbutton4" >
         <ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
@@ -97,16 +104,18 @@
             android:textSize="28sp"
             android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_button_e"
-        android:onClick=""
+        android:onClick="face5"
         android:clickable="true"
         android:focusable="true"
-        android:layout_margin="5dp" >
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layoutbutton5" >
         <ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
@@ -120,16 +129,18 @@
             android:textSize="28sp"
             android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:background="@drawable/custom_button_f"
-        android:onClick=""
+        android:onClick="face6"
         android:clickable="true"
         android:focusable="true"
-        android:layout_margin="5dp" >
+        android:layout_marginBottom="5dp"
+        android:id="@+id/layoutbutton6" >
         <ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
@@ -143,6 +154,7 @@
             android:textSize="28sp"
             android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>
