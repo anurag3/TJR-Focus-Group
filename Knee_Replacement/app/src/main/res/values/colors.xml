@@ -39,4 +39,8 @@
 
     </integer-array>
 
+    <color name="default_button_color_pressed">#FF33B5E5</color>
+    <color name="default_button_color">#FF33B5E5</color>
+    <color name="default_button_color_disabled">#FF33B5E5</color>
+
 </resources>
