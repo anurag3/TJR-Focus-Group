@@ -106,7 +106,8 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.popup3, null);
+        //View v = inflater.inflate(R.layout.popup3, null);
+        View v = inflater.inflate(R.layout.activity_transparent_button_horizontal_scroll, null);
 
         sb = (SeekBar) v.findViewById(R.id.seekBar);
 
@@ -178,22 +179,22 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         String facenumber = (String) v.getTag();
 
         switch (facenumber) {
-            case "6":
+            case "1":
                 sb.setProgress(97);
                 break;
-            case "5":
+            case "2":
                 sb.setProgress(77);
                 break;
-            case "4":
+            case "3":
                 sb.setProgress(58);
                 break;
-            case "3":
+            case "4":
                 sb.setProgress(40);
                 break;
-            case "2":
+            case "5":
                 sb.setProgress(22);
                 break;
-            case "1":
+            case "6":
                 sb.setProgress(5);
                 break;
 
