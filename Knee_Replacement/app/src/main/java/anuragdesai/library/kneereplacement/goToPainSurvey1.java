@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -42,6 +44,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public int a4;
     public int a5;
     private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
+    public Drawable d1;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,8 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         button1 = (Button) this.findViewById(R.id.interface1next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
+        d1= getResources().getDrawable(R.drawable.roundbutton);
+
 
     }
 
@@ -176,7 +181,8 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
                     } else {
                         button1.setEnabled(false);
                     }
-                    button.setBackgroundColor(colorToChangeTo);
+                    d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
+                    button.setBackground(d1);
                     dialog.dismiss();
 
                 }

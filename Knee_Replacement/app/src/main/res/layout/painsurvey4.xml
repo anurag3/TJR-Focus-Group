@@ -17,7 +17,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn1"
         android:onClick="buttonselection4"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/roundbutton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -26,7 +26,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn2"
         android:onClick="buttonselection4"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/roundbutton"
         android:layout_marginEnd="7dp"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/bodybtn1"
@@ -36,7 +36,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn3"
         android:onClick="buttonselection4"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/roundbutton"
         android:layout_alignTop="@+id/bodybtn2"
         android:layout_toEndOf="@+id/bodybtn1" />
 
@@ -45,7 +45,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn4"
         android:onClick="buttonselection4"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/roundbutton"
         android:layout_marginTop="38dp"
         android:layout_below="@+id/bodybtn2"
         android:layout_alignEnd="@+id/bodybtn2"
@@ -56,7 +56,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn5"
         android:onClick="buttonselection4"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/roundbutton"
         android:layout_alignTop="@+id/bodybtn4"
         android:layout_alignStart="@+id/bodybtn3"
         android:layout_marginStart="3dp" />

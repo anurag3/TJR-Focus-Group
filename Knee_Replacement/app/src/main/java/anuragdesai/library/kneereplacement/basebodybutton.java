@@ -1,6 +1,8 @@
 package anuragdesai.library.kneereplacement;
 
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +21,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
     int buttonNum = -1;
     boolean pressedYet = false;
     NextButtonController nextBtn = null;
+    public Drawable d1;
 
 
     public basebodybutton(Button button, Taptap3 M, int buttonNum, NextButtonController nextBtn) {
@@ -26,6 +29,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
         this.M = M;
         this.buttonNum = buttonNum;
         this.nextBtn = nextBtn;
+        d1= getResources().getDrawable(R.drawable.roundbutton);
 
     }
 
@@ -38,24 +42,32 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
             if (i == 4)
                 i = 0;
             if (i == 0) {
-                button.setBackgroundColor(Color.GRAY);
+                d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+                button.setBackground(d1);
+                //button.setBackgroundColor(Color.GRAY);
             }
             if (i == 1) {
-                button.setBackgroundColor(Color.GREEN);
+                d1.setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_ATOP);
+                button.setBackground(d1);
+                //button.setBackgroundColor(Color.GREEN);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "No Hurt - Hurts Little Bit");
 
                 //Toast.makeText(M.getApplicationContext(), "No Hurt - Hurts Little Bit",
                 //Toast.LENGTH_SHORT).show();
             }
             if (i == 2) {
-                button.setBackgroundColor(Color.YELLOW);
+                d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+                button.setBackground(d1);
+                //button.setBackgroundColor(Color.YELLOW);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little More - Hurts Even More");
 
                 //Toast.makeText(M.getApplicationContext(), "Hurts Little More - Hurts Even More",
                 //Toast.LENGTH_SHORT).show();
             }
             if (i == 3) {
-                button.setBackgroundColor(Color.RED);
+                d1.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
+                button.setBackground(d1);
+                //button.setBackgroundColor(Color.RED);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Whole Lot - Hurts Worst");
                 //Toast.makeText(M.getApplicationContext(), "Hurts Whole Lot - Hurts Worst",
                 //Toast.LENGTH_SHORT).show();

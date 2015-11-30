@@ -35,17 +35,7 @@
     android:padding="50dp"
     android:layout_toStartOf="@+id/bodybtn1" />
 
-<Button
-    android:layout_width="25dp"
-    android:layout_height="25dp"
-    android:id="@+id/bodybtn3"
-    android:onClick="buttonselection3"
-    android:background="@drawable/roundbutton"
-    android:layout_alignTop="@+id/bodybtn2"
-    android:padding="50dp"
-    android:layout_toEndOf="@+id/bodybtn1" />
-
-<Button
+    <Button
     android:layout_width="25dp"
     android:layout_height="25dp"
     android:id="@+id/bodybtn4"
@@ -57,18 +47,7 @@
     android:layout_marginEnd="2dp"
     android:padding="50dp"/>
 
-<Button
-    android:layout_width="25dp"
-    android:layout_height="25dp"
-    android:id="@+id/bodybtn5"
-    android:onClick="buttonselection3"
-    android:background="@drawable/roundbutton"
-    android:layout_alignTop="@+id/bodybtn4"
-    android:layout_alignStart="@+id/bodybtn3"
-    android:layout_marginStart="3dp"
-    android:padding="50dp" />
-
-<Button
+    <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Next"

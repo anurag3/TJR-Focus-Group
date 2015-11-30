@@ -44,7 +44,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
        /* button1 = (Button) this.findViewById(R.id.interface3next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);*/
-        d1= getResources().getDrawable(R.drawable.roundbutton);
+        d1=getResources().getDrawable(R.drawable.roundbutton);
 
 
 
@@ -139,11 +139,20 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         }
                         udc.writeToSDFile("Survey 3 submitted");
                         udc.writeToSDFile("Survey 3 result: " + s);
-                       // button.setBackground(d1);
+                        System.out.println("1st Button");
                         d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
-                        button.setBackground(d1);
+                        /*System.out.println("button "+button);
+                        button.setBackground(d1);*/
+if(B1==button)
+{
+    B1.setBackground(d1);
+}
 
-                        //button.setBackgroundColor(colorToChangeTo);
+                        if(B4==button)
+                        {
+                            B4.setBackground(d1);
+                        }
+
                         buttonCounter.recordValueStored(button);
 
                         /*if (buttonCounter.areButtonsStored(3)) {
@@ -154,6 +163,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
                     }
                 });
+
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 udc.writeToSDFile("Survey 3 cancelled");
@@ -161,7 +171,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         });
         dialog = alert.create();
         dialog.show();
-
+        System.out.println("1st Button end");
 
         // dialog.dismiss();
 

@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -37,6 +39,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     public int a4;
     public int a5;
     private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
+    public Drawable d1;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +49,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         button1 = (Button) this.findViewById(R.id.interface4next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
+        d1= getResources().getDrawable(R.drawable.roundbutton);
     }
 
     public void buttonselection4(View view) {
@@ -134,7 +138,8 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
                         }
                         udc.writeToSDFile("Survey 4 submitted");
                         udc.writeToSDFile("Survey 4 result: " + s);
-                        button.setBackgroundColor(colorToChangeTo);
+                        d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
+                        button.setBackground(d1);
                         buttonCounter.recordValueStored(button);
                         if (buttonCounter.areButtonsStored(3)) {
                             button1.setEnabled(true);
