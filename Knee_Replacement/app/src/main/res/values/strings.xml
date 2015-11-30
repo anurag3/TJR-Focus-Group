@@ -10,5 +10,13 @@
     <string name="patient_id">Patient ID</string>
     <string name="info_random">The interfaces will be \nrandomly assigned in this survey</string>
     <string name="legends">Standard legends for each survey \nwill be provided single button click</string>
+    <string name="title_activity_transparent_button_text">TransparentButtonText</string>
+
+    <string name="pain_6">Hurts Worst</string>
+    <string name="pain_5">Hurts Whole Lot</string>
+    <string name="pain_4">Hurts Even More</string>
+    <string name="pain_3">Hurts Little More</string>
+    <string name="pain_2">Hurts Little Bit</string>
+    <string name="pain_1">No Hurt</string>
 
 </resources>

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -29,6 +30,12 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     private RadioButton RB4;
     private RadioButton RB5;
     private RadioButton RB6;
+    private LinearLayout LL1;
+    private LinearLayout LL2;
+    private LinearLayout LL3;
+    private LinearLayout LL4;
+    private LinearLayout LL5;
+    private LinearLayout LL6;
     private Button button1;
     Boolean b = false;
     public Button B1;
@@ -46,6 +53,8 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     private Utils.buttonCounter buttonCounter = new Utils.buttonCounter();
     public Drawable d1;
 
+
+    private int currentSelectedFace = -1;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,14 +121,22 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
 
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.popup2, null);
 
-        RB1 = (RadioButton) v.findViewById(R.id.radioButton1);
+        View v = inflater.inflate(R.layout.activity_transparent_button_text, null);
+
+        /*RB1 = (RadioButton) v.findViewById(R.id.radioButton1);
         RB2 = (RadioButton) v.findViewById(R.id.radioButton2);
         RB3 = (RadioButton) v.findViewById(R.id.radioButton3);
         RB4 = (RadioButton) v.findViewById(R.id.radioButton4);
         RB5 = (RadioButton) v.findViewById(R.id.radioButton5);
-        RB6 = (RadioButton) v.findViewById(R.id.radioButton6);
+        RB6 = (RadioButton) v.findViewById(R.id.radioButton6);*/
+
+        LL1 = (LinearLayout) v.findViewById(R.id.layoutbutton1);
+        LL2 = (LinearLayout) v.findViewById(R.id.layoutbutton2);
+        LL3 = (LinearLayout) v.findViewById(R.id.layoutbutton3);
+        LL4 = (LinearLayout) v.findViewById(R.id.layoutbutton4);
+        LL5 = (LinearLayout) v.findViewById(R.id.layoutbutton5);
+        LL6 = (LinearLayout) v.findViewById(R.id.layoutbutton6);
 
 
         alert.setView(v);
@@ -144,7 +161,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
             public void onClick(View v) {
                 int colorToChangeTo = 0;
                 udc.writeToSDFile("Survey 2 submitted");
-                if (RB6.isChecked()) {
+                /*if (RB6.isChecked()) {
                     udc.writeToSDFile("Survey 2 result: No Hurt");
                     b = true;
                     colorToChangeTo = Utils.getColorForLevel(1);
@@ -171,6 +188,43 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
                 } else {
                     Toast.makeText(getApplicationContext(), "Please Select A Pain Level",
                             Toast.LENGTH_SHORT).show();
+                }*/
+
+                switch (currentSelectedFace) {
+                    case 6:
+                        udc.writeToSDFile("Survey 2 result: No Hurt");
+                        b = true;
+                        colorToChangeTo = Utils.getColorForLevel(1);
+                        break;
+                    case 5:
+                        udc.writeToSDFile("Survey 2 result: Hurts Little Bit");
+                        b = true;
+                        colorToChangeTo = Utils.getColorForLevel(2);
+                        break;
+                    case 4:
+                        udc.writeToSDFile("Survey 2 result: Hurts Little More");
+                        b = true;
+                        colorToChangeTo = Utils.getColorForLevel(3);
+                        break;
+                    case 3:
+                        udc.writeToSDFile("Survey 2 result: Hurts Even More");
+                        b = true;
+                        colorToChangeTo = Utils.getColorForLevel(4);
+                        break;
+                    case 2:
+                        udc.writeToSDFile("Survey 2 result: Hurts Whole Lot");
+                        b = true;
+                        colorToChangeTo = Utils.getColorForLevel(5);
+                        break;
+                    case 1:
+                        udc.writeToSDFile("Survey 2 result: Hurts Worst");
+                        b = true;
+                        colorToChangeTo = Utils.getColorForLevel(6);
+                        break;
+                    default:
+                        Toast.makeText(getApplicationContext(), "Please Select A Pain Level",
+                                Toast.LENGTH_SHORT).show();
+                        break;
                 }
 
                 if (b) {
@@ -201,38 +255,44 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
 
     //control all the button so that only one choice can be chosen
     public void face1(View view) {
-        resetAllRadio();
-        RB1.setChecked(true);
+        enableUnclickedLayouts(1);
+        //resetAllRadio();
+        //RB1.setChecked(true);
     }
 
     //control all the button so that only one choice can be chosen
     public void face2(View view) {
-        resetAllRadio();
-        RB2.setChecked(true);
+        enableUnclickedLayouts(2);
+        //resetAllRadio();
+        //RB2.setChecked(true);
     }
 
     //control all the button so that only one choice can be chosen
     public void face3(View view) {
-        resetAllRadio();
-        RB3.setChecked(true);
+        enableUnclickedLayouts(3);
+        //resetAllRadio();
+        //RB3.setChecked(true);
     }
 
     //control all the button so that only one choice can be chosen
     public void face4(View view) {
-        resetAllRadio();
-        RB4.setChecked(true);
+        enableUnclickedLayouts(4);
+        //resetAllRadio();
+        //RB4.setChecked(true);
     }
 
     //control all the button so that only one choice can be chosen
     public void face5(View view) {
-        resetAllRadio();
-        RB5.setChecked(true);
+        enableUnclickedLayouts(5);
+        //resetAllRadio();
+        //RB5.setChecked(true);
     }
 
     //control all the button so that only one choice can be chosen
     public void face6(View view) {
-        resetAllRadio();
-        RB6.setChecked(true);
+        enableUnclickedLayouts(6);
+        //resetAllRadio();
+        //RB6.setChecked(true);
     }
 
     //control all the button so that only one choice can be chosen
@@ -243,6 +303,16 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         RB4.setChecked(false);
         RB5.setChecked(false);
         RB6.setChecked(false);
+    }
+
+    private void enableUnclickedLayouts(int selected) {
+        currentSelectedFace = selected;
+        LL1.setEnabled(selected != 1);
+        LL2.setEnabled(selected != 2);
+        LL3.setEnabled(selected != 3);
+        LL4.setEnabled(selected != 4);
+        LL5.setEnabled(selected != 5);
+        LL6.setEnabled(selected != 6);
     }
 
     public void onBackPressed() {

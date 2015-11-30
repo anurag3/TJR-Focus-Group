@@ -143,15 +143,6 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
                         /*System.out.println("button "+button);
                         button.setBackground(d1);*/
-if(B1==button)
-{
-    B1.setBackground(d1);
-}
-
-                        if(B4==button)
-                        {
-                            B4.setBackground(d1);
-                        }
 
                         buttonCounter.recordValueStored(button);
 
