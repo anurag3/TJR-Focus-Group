@@ -3,6 +3,7 @@ package anuragdesai.library.kneereplacement;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,7 +30,8 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
         this.M = M;
         this.buttonNum = buttonNum;
         this.nextBtn = nextBtn;
-        d1= getResources().getDrawable(R.drawable.roundbutton);
+        //d1= getResources().getDrawable(R.drawable.roundbutton);
+        d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
 
     }
 
@@ -38,6 +40,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
         {
             i++;
             //mToast.cancel();
+            d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
 
             if (i == 4)
                 i = 0;

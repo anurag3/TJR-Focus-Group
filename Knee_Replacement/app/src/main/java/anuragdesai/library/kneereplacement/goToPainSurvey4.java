@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -98,6 +99,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     }
 
     public void verticalscroll(final Button button) {
+        d1 = ContextCompat.getDrawable(this, R.drawable.roundbutton);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         AlertDialog dialog;
         alert.setTitle("Pain Survey");
