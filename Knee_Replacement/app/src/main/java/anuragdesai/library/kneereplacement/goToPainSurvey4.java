@@ -104,7 +104,8 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
 
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.popup4, null);
+        //View v = inflater.inflate(R.layout.popup4, null);
+        View v = inflater.inflate(R.layout.activity_transparent_button_vertical_scroll, null);
 
         sb = (SeekBar) v.findViewById(R.id.VerticalSeekBar1);
 
