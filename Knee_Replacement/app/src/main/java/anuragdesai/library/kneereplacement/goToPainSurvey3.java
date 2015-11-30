@@ -141,8 +141,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
                         udc.writeToSDFile("Survey 3 result: " + s);
                         System.out.println("1st Button");
                         d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
-                        /*System.out.println("button "+button);
-                        button.setBackground(d1);*/
+                        button.setBackground(d1);
 
                         buttonCounter.recordValueStored(button);
 
