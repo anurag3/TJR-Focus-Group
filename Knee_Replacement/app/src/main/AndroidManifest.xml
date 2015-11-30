@@ -48,10 +48,6 @@
         </activity>
         <activity android:name=".informrandomorder" >
         </activity>
-        <activity
-            android:name=".TransparentButtonText"
-            android:label="@string/title_activity_transparent_button_text" >
-        </activity>
     </application>
 
 </manifest>

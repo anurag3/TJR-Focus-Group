@@ -122,7 +122,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View v = inflater.inflate(R.layout.activity_transparent_button_text, null);
+        View v = inflater.inflate(R.layout.activity_transparent_button_vertical, null);
 
         /*RB1 = (RadioButton) v.findViewById(R.id.radioButton1);
         RB2 = (RadioButton) v.findViewById(R.id.radioButton2);
