@@ -42,9 +42,9 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.painsurvey3);
         udc = new UserDataCollector();
         setTitle("Horizontal Slide");
-       /* button1 = (Button) this.findViewById(R.id.interface3next);
+        button1 = (Button) this.findViewById(R.id.interface3next);
         button1.setOnClickListener(this);
-        button1.setEnabled(false);*/
+        button1.setEnabled(false);
         d1=getResources().getDrawable(R.drawable.roundbutton);
 
 
@@ -148,11 +148,11 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
                         buttonCounter.recordValueStored(button);
 
-                        /*if (buttonCounter.areButtonsStored(3)) {
+                        if (buttonCounter.areButtonsStored(3)) {
                             button1.setEnabled(true);
                         } else {
                             button1.setEnabled(false);
-                        }*/
+                        }
 
                     }
                 });

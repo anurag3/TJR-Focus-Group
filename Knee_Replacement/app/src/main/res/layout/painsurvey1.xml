@@ -39,7 +39,8 @@
         android:onClick="buttonselection1"
         android:background="@drawable/roundbutton"
         android:layout_alignTop="@+id/bodybtn2"
-        android:layout_toEndOf="@+id/bodybtn1" />
+        android:layout_toEndOf="@+id/bodybtn1"
+        android:visibility="invisible" />
 
     <Button
         android:layout_width="25dp"
@@ -60,7 +61,8 @@
         android:background="@drawable/roundbutton"
         android:layout_alignTop="@+id/bodybtn4"
         android:layout_alignStart="@+id/bodybtn3"
-        android:layout_marginStart="3dp" />
+        android:layout_marginStart="3dp"
+        android:visibility="invisible"/>
 
     <Button
         android:layout_width="wrap_content"
