@@ -20,7 +20,8 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
     Activity M;
     Intent intent;
     int b1 = -1, b2 = -1, b3 = -1, b4 = -1, b5 = -1;
-    public UserDataCollector udc;
+    DataEntry entry1, entry2, entry3, entry4, entry5;
+    //public UserDataCollector udc;
 
     public NextButtonController(Button button1, Activity M, Intent intent) {
         this.button1 = button1;
@@ -40,8 +41,8 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
         String sb3 = String.valueOf(b3);
         String sb4 = String.valueOf(b4);
         String sb5 = String.valueOf(b5);
-        udc = new UserDataCollector();
-        udc.checkExternalMedia();
+        //udc = new UserDataCollector();
+        //udc.checkExternalMedia();
 
 
            /* List<Integer> arr= new ArrayList<Integer>();
@@ -66,20 +67,31 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
 
                         if (arr.size()>=3) {
             */
-        if (b1 != -1)
-            udc.writeToSDFile("Back Pain Level = " + sb1);
-        if (b2 != -1)
-            udc.writeToSDFile("Right Hip Pain Level = " + sb2);
-        if (b3 != -1)
-            udc.writeToSDFile("Left Hip Pain Level = " + sb3);
-        if (b4 != -1)
-            udc.writeToSDFile("Right Knee Pain Level = " + sb4);
-        if (b5 != -1)
-            udc.writeToSDFile("Left Knee Pain Level = " + sb5);
+        if (b1 != -1 && entry1 != null) {
+            //entry1.endEntry(b1);
+            entry1.saveEntry();
+        }
+        if (b2 != -1 && entry2 != null) {
+            //entry2.endEntry(b2);
+            entry2.saveEntry();
+        }
+        if (b3 != -1 && entry3 != null) {
+            //entry3.endEntry(b3);
+            entry3.saveEntry();
+        }
+        if (b4 != -1 && entry4 != null) {
+            //entry4.endEntry(b4);
+            entry4.saveEntry();
+        }
+        if (b5 != -1 && entry5 != null) {
+            //entry5.endEntry(b5);
+            entry5.saveEntry();
+        }
 
 
         //Intent intent = new Intent(M, infopage5.class);
         M.startActivity(intent);
+        finish();
             /*
             }
             else
@@ -90,7 +102,7 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
             */
     }
 
-    public void setButtonEnabled(boolean enable){
+    public void setButtonEnabled(boolean enable) {
         button1.setEnabled(enable);
     }
 

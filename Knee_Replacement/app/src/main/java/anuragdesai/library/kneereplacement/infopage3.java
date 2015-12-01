@@ -22,6 +22,7 @@ public class infopage3 extends AppCompatActivity implements View.OnClickListener
         button1.setOnClickListener(this);
         Intent intent = new Intent(this, gotoSurveyActivity.class);
         startActivity(intent);
+        finish();
     }
     public void onBackPressed() {}
 

@@ -11,8 +11,11 @@ import android.view.View;
 public class thankyou extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.thankyou);
+        DataEntry.generateReports();
+        DataEntry.clearEntries();
 }
 
 public void onClick(View view)

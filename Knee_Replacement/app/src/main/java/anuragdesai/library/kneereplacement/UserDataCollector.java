@@ -29,8 +29,12 @@ import java.util.Date;
 public class UserDataCollector {
 
     private static final String TAG = "MEDIA";
+    private String csvfilename = "";
+    private String headers;
 
-    public UserDataCollector() {
+    public UserDataCollector(String csvfilename, String headers) {
+        this.csvfilename = csvfilename;
+        this.headers = headers;
     }
 
     public void checkExternalMedia(){
@@ -57,7 +61,7 @@ public class UserDataCollector {
      WRITE_EXTERNAL_STORAGE permission to the manifest file or this method will throw
      a FileNotFound Exception because you won't have write permission. */
 
-    public void writeToSDFile(String string){
+    private void writeToSDFile(String string){
 
         // Find the root of the external storage.
         // See http://developer.android.com/guide/topics/data/data-  storage.html#filesExternal
@@ -67,16 +71,23 @@ public class UserDataCollector {
 
         // See http://stackoverflow.com/questions/3551821/android-write-to-sd-card-folder
 
-        File dir = new File (root.getAbsolutePath() + "/download");
+        File dir = new File (root.getAbsolutePath() + "/download/tjr/");
+        dir.mkdirs();
         //dir.mkdirs();
-        File file = new File(dir, "TJRData.txt");
 
         try {
+            File file = new File(dir, csvfilename);
+            boolean fileExists = file.exists();
             FileOutputStream f = new FileOutputStream(file, true);
             OutputStreamWriter pw = new OutputStreamWriter(f);
+            if(!fileExists){
+                //PrintWriter pw = new PrintWriter(f);
+                pw.append(headers + "\n");
+            }
             //PrintWriter pw = new PrintWriter(f);
-            pw.append("\n" + string + " " + DateFormat.getDateTimeInstance().format(new Date())+ " " + System.currentTimeMillis());
+            //pw.append("\n" + string + " " + DateFormat.getDateTimeInstance().format(new Date())+ " " + System.currentTimeMillis());
             //pw.flush();
+            pw.append(string + "\n");
             pw.close();
             f.close();
             Log.i("!!!!!!dataCollector", "\n\nFile written to " + file);
@@ -88,5 +99,9 @@ public class UserDataCollector {
             e.printStackTrace();
         }
 
+    }
+
+    public void writeEntry(DataEntry entry){
+        writeToSDFile(entry.getCSV());
     }
 }

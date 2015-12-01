@@ -14,6 +14,7 @@ public class Taptap3 extends AppCompatActivity {
     public static int count5;
 
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey5);
         setTitle("Interface 5");

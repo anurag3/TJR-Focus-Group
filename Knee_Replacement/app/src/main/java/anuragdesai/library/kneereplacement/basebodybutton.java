@@ -23,7 +23,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
     boolean pressedYet = false;
     NextButtonController nextBtn = null;
     public Drawable d1;
-
+    public DataEntry entry = null;
 
     public basebodybutton(Button button, Taptap3 M, int buttonNum, NextButtonController nextBtn) {
         this.button = button;
@@ -37,16 +37,42 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
 
 
     public void onClick(View view) {
+        int value = 0;
+        if(entry == null){
+            entry = DataEntry.startEntry(5, "TapTap3", Joint.getJointFromButtonNumber(buttonNum));
+
+            switch(buttonNum){
+                case 1:
+                    nextBtn.entry1 = entry;
+                    break;
+                case 2:
+                    nextBtn.entry2 = entry;
+                    break;
+                case 3:
+                    nextBtn.entry3 = entry;
+                    break;
+                case 4:
+                    nextBtn.entry4 = entry;
+                    break;
+                case 5:
+                    nextBtn.entry5 = entry;
+                    break;
+            }
+        }
+
         {
             i++;
             //mToast.cancel();
             d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
 
-            if (i == 4)
+            if (i == 4) {
                 i = 0;
+                value = -1;
+            }
             if (i == 0) {
                 d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
                 button.setBackground(d1);
+                value = -1;
                 //button.setBackgroundColor(Color.GRAY);
             }
             if (i == 1) {
@@ -55,12 +81,14 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
                 //button.setBackgroundColor(Color.GREEN);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "No Hurt - Hurts Little Bit");
 
+                value = 2;
                 //Toast.makeText(M.getApplicationContext(), "No Hurt - Hurts Little Bit",
                 //Toast.LENGTH_SHORT).show();
             }
             if (i == 2) {
                 d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
                 button.setBackground(d1);
+                value = 6;
                 //button.setBackgroundColor(Color.YELLOW);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little More - Hurts Even More");
 
@@ -70,6 +98,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
             if (i == 3) {
                 d1.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
                 button.setBackground(d1);
+                value = 10;
                 //button.setBackgroundColor(Color.RED);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Whole Lot - Hurts Worst");
                 //Toast.makeText(M.getApplicationContext(), "Hurts Whole Lot - Hurts Worst",
@@ -77,22 +106,23 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
             }
         }
 
+        entry.endEntry(value);
         switch(buttonNum){
             default:
             case 1:
-                nextBtn.b1 = i;
+                nextBtn.b1 = value;
                 break;
             case 2:
-                nextBtn.b2 = i;
+                nextBtn.b2 = value;
                 break;
             case 3:
-                nextBtn.b3 = i;
+                nextBtn.b3 = value;
                 break;
             case 4:
-                nextBtn.b4 = i;
+                nextBtn.b4 = value;
                 break;
             case 5:
-                nextBtn.b5 = i;
+                nextBtn.b5 = value;
                 break;
         }
         //buttonnxt.b5 = i;

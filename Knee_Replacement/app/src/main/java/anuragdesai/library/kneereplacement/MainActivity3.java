@@ -27,7 +27,7 @@ public class MainActivity3 extends AppCompatActivity {
     private RadioButton RB4;
     private RadioButton RB5;
     private RadioButton RB6;
-    private UserDataCollector udc;
+    //private UserDataCollector udc;
     Boolean b = false;
     private Button B1;
     private Button B2;
@@ -38,7 +38,7 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
-        udc= new UserDataCollector();
+        //udc= new UserDataCollector();
     }
 /*
     public void goToPainSurvey(View view) {

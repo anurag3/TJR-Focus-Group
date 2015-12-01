@@ -43,11 +43,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
     private PopupWindow popup1;
     private LayoutInflater layoutinflater1;
     private RelativeLayout relativelayout1;
-    public UserDataCollector udc;
-    public Editable tyu;
+    //public UserDataCollector udc;
+    public static Editable tyu;
     public EditText et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -112,9 +113,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
     public void onClick(View view)
     {
         System.out.println(et.getText());
-        udc = new UserDataCollector();
-        udc.checkExternalMedia();
-        udc.writeToSDFile("Patient_ID = " + tyu);
+        //udc = new UserDataCollector();
+        //udc.checkExternalMedia();
+        //udc.writeToSDFile("Patient_ID = " + tyu);
 
         if( et.getText().toString().trim().equals("")){
 
@@ -124,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         }else{
             Intent intent = new Intent(this,informrandomorder.class);
             startActivity(intent);
+            finish();
         }
 
     }
