@@ -57,7 +57,7 @@ public class UserDataCollector {
      WRITE_EXTERNAL_STORAGE permission to the manifest file or this method will throw
      a FileNotFound Exception because you won't have write permission. */
 
-    public void writeToSDFile(String string){
+    private void writeToSDFile(String string){
 
         // Find the root of the external storage.
         // See http://developer.android.com/guide/topics/data/data-  storage.html#filesExternal
@@ -69,14 +69,20 @@ public class UserDataCollector {
 
         File dir = new File (root.getAbsolutePath() + "/download");
         //dir.mkdirs();
-        File file = new File(dir, "TJRData.txt");
 
         try {
+            File file = new File(dir, "TJRData.csv");
+            boolean fileExists = file.exists();
             FileOutputStream f = new FileOutputStream(file, true);
             OutputStreamWriter pw = new OutputStreamWriter(f);
+            if(!fileExists){
+                //PrintWriter pw = new PrintWriter(f);
+                pw.append(DataEntry.getHeaders() + "\n");
+            }
             //PrintWriter pw = new PrintWriter(f);
-            pw.append("\n" + string + " " + DateFormat.getDateTimeInstance().format(new Date())+ " " + System.currentTimeMillis());
+            //pw.append("\n" + string + " " + DateFormat.getDateTimeInstance().format(new Date())+ " " + System.currentTimeMillis());
             //pw.flush();
+            pw.append(string + "\n");
             pw.close();
             f.close();
             Log.i("!!!!!!dataCollector", "\n\nFile written to " + file);
@@ -88,5 +94,9 @@ public class UserDataCollector {
             e.printStackTrace();
         }
 
+    }
+
+    public void writeEntry(DataEntry entry){
+        writeToSDFile(entry.getCSV());
     }
 }

@@ -54,6 +54,8 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public Drawable d1;
     private int currentSelectedFace = -1;
 
+    private DataEntry entry;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,27 +87,32 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         int id = view.getId();
         switch (id) {
             case R.id.bodybtn1:
-                udc.writeToSDFile("Back Pain Survery Started");
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.BACK);
                 arr.set(0, 1);
                 horizontaltap(B1);
                 break;
             case R.id.bodybtn2:
-                udc.writeToSDFile("Right Hip Survery Started");
+                //udc.writeToSDFile("Right Hip Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.LEFT_HIP);
                 arr.set(1, 1);
                 horizontaltap(B2);
                 break;
             case R.id.bodybtn3:
-                udc.writeToSDFile("Left Hip Survery Started");
+                //udc.writeToSDFile("Left Hip Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.RIGHT_HIP);
                 arr.set(2, 1);
                 horizontaltap(B3);
                 break;
             case R.id.bodybtn4:
-                udc.writeToSDFile("Right Knee Survey Started");
+                //udc.writeToSDFile("Right Knee Survey Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.LEFT_KNEE);
                 arr.set(3, 1);
                 horizontaltap(B4);
                 break;
             case R.id.bodybtn5:
-                udc.writeToSDFile("Left Knee Survey Started");
+                //udc.writeToSDFile("Left Knee Survey Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.RIGHT_KNEE);
                 arr.set(4, 1);
                 horizontaltap(B5);
                 break;
@@ -149,7 +156,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
                 });
         alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                udc.writeToSDFile("Survey 1 Cancelled");
+                //udc.writeToSDFile("Survey 1 Cancelled");
             }
         });
 
@@ -160,7 +167,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 int colorToChangeTo = 0;
-                udc.writeToSDFile("Survey 1 Submitted");
+                //udc.writeToSDFile("Survey 1 Submitted");
                 /*if (RB1.isChecked()) {
                     udc.writeToSDFile("Survey 1 result: No Hurt");
                     b = true;
@@ -191,32 +198,38 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
                 }*/
                 switch (currentSelectedFace) {
                     case 6:
-                        udc.writeToSDFile("Survey 1 result: No Hurt");
+                        //udc.writeToSDFile("Survey 1 result: No Hurt");
+                        entry.endEntry(0);
                         b = true;
                         colorToChangeTo = Utils.getColorForLevel(1);
                         break;
                     case 5:
-                        udc.writeToSDFile("Survey 1 result: Hurts Little Bit");
+                        //udc.writeToSDFile("Survey 1 result: Hurts Little Bit");
+                        entry.endEntry(2);
                         b = true;
                         colorToChangeTo = Utils.getColorForLevel(2);
                         break;
                     case 4:
-                        udc.writeToSDFile("Survey 1 result: Hurts Little More");
+                        //udc.writeToSDFile("Survey 1 result: Hurts Little More");
+                        entry.endEntry(4);
                         b = true;
                         colorToChangeTo = Utils.getColorForLevel(3);
                         break;
                     case 3:
-                        udc.writeToSDFile("Survey 1 result: Hurts Even More");
+                        //udc.writeToSDFile("Survey 1 result: Hurts Even More");
+                        entry.endEntry(6);
                         b = true;
                         colorToChangeTo = Utils.getColorForLevel(4);
                         break;
                     case 2:
-                        udc.writeToSDFile("Survey 1 result: Hurts Whole Lot");
+                        //udc.writeToSDFile("Survey 1 result: Hurts Whole Lot");
+                        entry.endEntry(8);
                         b = true;
                         colorToChangeTo = Utils.getColorForLevel(5);
                         break;
                     case 1:
-                        udc.writeToSDFile("Survey 1 result: Hurts Worst");
+                        //udc.writeToSDFile("Survey 1 result: Hurts Worst");
+                        entry.endEntry(10);
                         b = true;
                         colorToChangeTo = Utils.getColorForLevel(6);
                         break;
@@ -228,6 +241,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
 
                 if (b) {
 
+                    entry.saveEntry();
                     buttonCounter.recordValueStored(button);
                     if (buttonCounter.areButtonsStored(3)) {
                         button1.setEnabled(true);

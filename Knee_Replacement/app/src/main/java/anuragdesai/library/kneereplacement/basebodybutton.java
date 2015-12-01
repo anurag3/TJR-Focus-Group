@@ -23,7 +23,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
     boolean pressedYet = false;
     NextButtonController nextBtn = null;
     public Drawable d1;
-
+    public DataEntry entry = null;
 
     public basebodybutton(Button button, Taptap3 M, int buttonNum, NextButtonController nextBtn) {
         this.button = button;
@@ -37,6 +37,28 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
 
 
     public void onClick(View view) {
+        if(entry == null){
+            entry = DataEntry.startEntry(5, "TapTap3", Joint.getJointFromButtonNumber(buttonNum));
+
+            switch(buttonNum){
+                case 1:
+                    nextBtn.entry1 = entry;
+                    break;
+                case 2:
+                    nextBtn.entry2 = entry;
+                    break;
+                case 3:
+                    nextBtn.entry3 = entry;
+                    break;
+                case 4:
+                    nextBtn.entry4 = entry;
+                    break;
+                case 5:
+                    nextBtn.entry5 = entry;
+                    break;
+            }
+        }
+
         {
             i++;
             //mToast.cancel();

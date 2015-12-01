@@ -23,6 +23,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
     boolean pressedYet = false;
     static int buttonsPressed = 0;
     public Drawable d1;
+    public DataEntry entry = null;
 
     public basetaptap6button(Button taptap6button, Taptap6 M, int buttonNum, NextButtonController nextBtn) {
         this.taptap6button = taptap6button;
@@ -36,6 +37,27 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
 
 
     public void onClick(View view) {
+        if(entry == null){
+            entry = DataEntry.startEntry(6, "TapTap6", Joint.getJointFromButtonNumber(buttonNum));
+
+            switch(buttonNum){
+                case 1:
+                    nextBtn.entry1 = entry;
+                    break;
+                case 2:
+                    nextBtn.entry2 = entry;
+                    break;
+                case 3:
+                    nextBtn.entry3 = entry;
+                    break;
+                case 4:
+                    nextBtn.entry4 = entry;
+                    break;
+                case 5:
+                    nextBtn.entry5 = entry;
+                    break;
+            }
+        }
         {
             i++;
             d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);

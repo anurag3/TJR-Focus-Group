@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
     private LayoutInflater layoutinflater1;
     private RelativeLayout relativelayout1;
     public UserDataCollector udc;
-    public Editable tyu;
+    public static Editable tyu;
     public EditText et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         System.out.println(et.getText());
         udc = new UserDataCollector();
         udc.checkExternalMedia();
-        udc.writeToSDFile("Patient_ID = " + tyu);
+        //udc.writeToSDFile("Patient_ID = " + tyu);
 
         if( et.getText().toString().trim().equals("")){
 
