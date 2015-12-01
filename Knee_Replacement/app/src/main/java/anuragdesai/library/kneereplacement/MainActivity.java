@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
     private PopupWindow popup1;
     private LayoutInflater layoutinflater1;
     private RelativeLayout relativelayout1;
-    public UserDataCollector udc;
+    //public UserDataCollector udc;
     public static Editable tyu;
     public EditText et;
     @Override
@@ -112,8 +112,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
     public void onClick(View view)
     {
         System.out.println(et.getText());
-        udc = new UserDataCollector();
-        udc.checkExternalMedia();
+        //udc = new UserDataCollector();
+        //udc.checkExternalMedia();
         //udc.writeToSDFile("Patient_ID = " + tyu);
 
         if( et.getText().toString().trim().equals("")){

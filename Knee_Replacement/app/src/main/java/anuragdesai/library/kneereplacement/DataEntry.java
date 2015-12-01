@@ -1,11 +1,14 @@
 package anuragdesai.library.kneereplacement;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Joshua on 12/1/2015.
  */
-public class DataEntry {
+public class DataEntry implements Comparable<DataEntry>{
     private Date startDate;
     private long startMilliseconds = -1;
     private Date endDate;
@@ -19,7 +22,8 @@ public class DataEntry {
     private String order = "";
     private long duration = -1;
 
-    public static UserDataCollector udc = new UserDataCollector();
+    public static UserDataCollector udc = new UserDataCollector("TJRRawData.csv", getHeaders());
+    private static List<DataEntry> entries = new ArrayList<>();
 
     private DataEntry(){
 
@@ -60,6 +64,40 @@ public class DataEntry {
     }
 
     public void saveEntry(){
+        udc.checkExternalMedia();
         udc.writeEntry(this);
+        entries.add(this);
+    }
+
+    @Override
+    public int compareTo(DataEntry other){
+        // compareTo should return < 0 if this is supposed to be
+        // less than other, > 0 if this is supposed to be greater than
+        // other and 0 if they are supposed to be equal
+        int order = this.subjectId - other.subjectId;
+
+        if(order == 0){
+            order = this.interfaceNumber - other.interfaceNumber;
+        }
+
+        if(order == 0){
+            order = this.joint.toString().compareTo(other.joint.toString());
+        }
+
+        return order;
+    }
+
+    public static void generateReports(){
+        UserDataCollector sorted = new UserDataCollector("TJRSortedData.csv", getHeaders());
+        sorted.checkExternalMedia();
+        Collections.sort(entries);
+        for(DataEntry e: entries){
+            sorted.writeEntry(e);
+        }
+
+    }
+
+    public static void clearEntries(){
+        entries.clear();
     }
 }

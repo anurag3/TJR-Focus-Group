@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickListener {
 
-    private UserDataCollector udc;
+    //private UserDataCollector udc;
     private Button button1;
     private SeekBar sb;
     public static int count4;
@@ -45,7 +45,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey4);
-        udc = new UserDataCollector();
+        //udc = new UserDataCollector();
         setTitle("Vertical Slide");
         button1 = (Button) this.findViewById(R.id.interface4next);
         button1.setOnClickListener(this);

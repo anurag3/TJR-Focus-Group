@@ -29,8 +29,12 @@ import java.util.Date;
 public class UserDataCollector {
 
     private static final String TAG = "MEDIA";
+    private String csvfilename = "";
+    private String headers;
 
-    public UserDataCollector() {
+    public UserDataCollector(String csvfilename, String headers) {
+        this.csvfilename = csvfilename;
+        this.headers = headers;
     }
 
     public void checkExternalMedia(){
@@ -67,17 +71,18 @@ public class UserDataCollector {
 
         // See http://stackoverflow.com/questions/3551821/android-write-to-sd-card-folder
 
-        File dir = new File (root.getAbsolutePath() + "/download");
+        File dir = new File (root.getAbsolutePath() + "/download/tjr/");
+        dir.mkdirs();
         //dir.mkdirs();
 
         try {
-            File file = new File(dir, "TJRData.csv");
+            File file = new File(dir, csvfilename);
             boolean fileExists = file.exists();
             FileOutputStream f = new FileOutputStream(file, true);
             OutputStreamWriter pw = new OutputStreamWriter(f);
             if(!fileExists){
                 //PrintWriter pw = new PrintWriter(f);
-                pw.append(DataEntry.getHeaders() + "\n");
+                pw.append(headers + "\n");
             }
             //PrintWriter pw = new PrintWriter(f);
             //pw.append("\n" + string + " " + DateFormat.getDateTimeInstance().format(new Date())+ " " + System.currentTimeMillis());

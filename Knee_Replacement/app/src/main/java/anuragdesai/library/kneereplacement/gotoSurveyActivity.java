@@ -17,7 +17,7 @@ import java.util.Random;
 
 
 public class gotoSurveyActivity extends AppCompatActivity {
-    private static UserDataCollector udc = new UserDataCollector();
+    //private static UserDataCollector udc = new UserDataCollector();
     private static int i;
     private static List<Integer> dataList;
     public static int flag;

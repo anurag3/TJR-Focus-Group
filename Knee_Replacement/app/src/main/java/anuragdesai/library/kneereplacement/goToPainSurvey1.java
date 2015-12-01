@@ -24,7 +24,7 @@ import java.util.List;
  */
 public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickListener {
 
-    private UserDataCollector udc;
+    //private UserDataCollector udc;
     private RadioButton RB1;
     private RadioButton RB2;
     private RadioButton RB3;
@@ -60,7 +60,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
-        udc = new UserDataCollector();
+        //udc = new UserDataCollector();
         setTitle("Horizontal Tap");
         button1 = (Button) this.findViewById(R.id.interface1next);
         button1.setOnClickListener(this);

@@ -21,7 +21,7 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
     Intent intent;
     int b1 = -1, b2 = -1, b3 = -1, b4 = -1, b5 = -1;
     DataEntry entry1, entry2, entry3, entry4, entry5;
-    public UserDataCollector udc;
+    //public UserDataCollector udc;
 
     public NextButtonController(Button button1, Activity M, Intent intent) {
         this.button1 = button1;
@@ -41,8 +41,8 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
         String sb3 = String.valueOf(b3);
         String sb4 = String.valueOf(b4);
         String sb5 = String.valueOf(b5);
-        udc = new UserDataCollector();
-        udc.checkExternalMedia();
+        //udc = new UserDataCollector();
+        //udc.checkExternalMedia();
 
 
            /* List<Integer> arr= new ArrayList<Integer>();
