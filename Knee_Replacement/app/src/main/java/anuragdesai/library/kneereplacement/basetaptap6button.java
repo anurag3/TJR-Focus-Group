@@ -37,6 +37,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
 
 
     public void onClick(View view) {
+        int value = -1;
         if(entry == null){
             entry = DataEntry.startEntry(6, "TapTap6", Joint.getJointFromButtonNumber(buttonNum));
 
@@ -63,16 +64,19 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
             d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
 
 
-            if (i == 7)
+            if (i == 7) {
                 i = 0;
+            }
             if (i == 0) {
                 d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
+                value = -1;
                 //taptap6button.setBackgroundColor(Color.GRAY);
             }
 
 
             if (i == 1) {
+                value = 0;
                 d1.setColorFilter(Color.parseColor("#FF669900"), PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FF669900"));
@@ -81,6 +85,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "No Hurt");
             }
             if (i == 2) {
+                value = 2;
                 d1.setColorFilter(Color.parseColor("#FF99CC00"), PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FF99CC00"));
@@ -89,6 +94,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little Bit");
             }
             if (i == 3) {
+                value = 4;
                 d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.YELLOW);
@@ -97,6 +103,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little More");
             }
             if (i == 4) {
+                value = 6;
                 d1.setColorFilter(Color.parseColor("#FFFFBB33"), PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FFFFBB33"));
@@ -105,6 +112,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Even More");
             }
             if (i == 5) {
+                value = 8;
                 d1.setColorFilter(Color.parseColor("#FFFF8800"), PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FFFF8800"));
@@ -113,6 +121,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Whole Lot");
             }
             if (i == 6) {
+                value = 10;
                 d1.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.RED);
@@ -128,22 +137,23 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
         bNext.inputB1(i);
         */
 
-        switch (buttonNum) {
+        entry.endEntry(value);
+        switch(buttonNum){
             default:
             case 1:
-                nextBtn.b1 = i;
+                nextBtn.b1 = value;
                 break;
             case 2:
-                nextBtn.b2 = i;
+                nextBtn.b2 = value;
                 break;
             case 3:
-                nextBtn.b3 = i;
+                nextBtn.b3 = value;
                 break;
             case 4:
-                nextBtn.b4 = i;
+                nextBtn.b4 = value;
                 break;
             case 5:
-                nextBtn.b5 = i;
+                nextBtn.b5 = value;
                 break;
         }
         //taptap6buttonnxt.b1=i;

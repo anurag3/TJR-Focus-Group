@@ -68,23 +68,23 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
                         if (arr.size()>=3) {
             */
         if (b1 != -1 && entry1 != null) {
-            entry1.endEntry(b1);
+            //entry1.endEntry(b1);
             entry1.saveEntry();
         }
         if (b2 != -1 && entry2 != null) {
-            entry2.endEntry(b2);
+            //entry2.endEntry(b2);
             entry2.saveEntry();
         }
         if (b3 != -1 && entry3 != null) {
-            entry3.endEntry(b3);
+            //entry3.endEntry(b3);
             entry3.saveEntry();
         }
         if (b4 != -1 && entry4 != null) {
-            entry4.endEntry(b4);
+            //entry4.endEntry(b4);
             entry4.saveEntry();
         }
         if (b5 != -1 && entry5 != null) {
-            entry5.endEntry(b5);
+            //entry5.endEntry(b5);
             entry5.saveEntry();
         }
 

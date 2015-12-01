@@ -17,6 +17,7 @@ public class DataEntry {
     private String details = "";
     private Joint joint;
     private String order = "";
+    private long duration = -1;
 
     public static UserDataCollector udc = new UserDataCollector();
 
@@ -41,6 +42,7 @@ public class DataEntry {
         this.endDate = new Date();
         this.endMilliseconds = System.currentTimeMillis();
         this.painLevel = pain;
+        this.duration =  endMilliseconds - startMilliseconds;
     }
 
     public void setDetails(String details){
@@ -48,13 +50,13 @@ public class DataEntry {
     }
 
     public static String getHeaders(){
-        return "SubjectID, Order, InterfaceNumber, InterfaceName, StartDate, StartMilliseconds, EndDate, EndMilliseconds, Joint, PainLevel, Details";
+        return "SubjectID, Order, InterfaceNumber, InterfaceName, StartDate, StartMilliseconds, EndDate, EndMilliseconds, Duration (ms),Joint, PainLevel, Details";
     }
 
     public String getCSV(){
         return subjectId + "," + order + "," + interfaceNumber + "," + interfaceName + ","
                 + startDate + "," + startMilliseconds + "," + endDate + ","
-                + endMilliseconds + "," + joint + "," + painLevel + "," + details;
+                + endMilliseconds + "," + duration + "," + joint + "," + painLevel + "," + details;
     }
 
     public void saveEntry(){
