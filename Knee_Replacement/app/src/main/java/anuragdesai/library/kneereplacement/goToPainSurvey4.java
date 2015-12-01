@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,7 +106,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //View v = inflater.inflate(R.layout.popup4, null);
-        View v = inflater.inflate(R.layout.activity_transparent_button_vertical_scroll, null);
+        View v = inflater.inflate(R.layout.transparent_button_vertical_scroll, null);
 
         sb = (SeekBar) v.findViewById(R.id.VerticalSeekBar1);
 

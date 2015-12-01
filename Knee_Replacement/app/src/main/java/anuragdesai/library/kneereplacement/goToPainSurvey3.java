@@ -5,13 +5,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
-import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
-import android.view.TouchDelegate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -109,7 +107,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //View v = inflater.inflate(R.layout.popup3, null);
-        View v = inflater.inflate(R.layout.activity_transparent_button_horizontal_scroll, null);
+        View v = inflater.inflate(R.layout.transparent_button_horizontal_scroll, null);
 
         sb = (SeekBar) v.findViewById(R.id.seekBar);
 

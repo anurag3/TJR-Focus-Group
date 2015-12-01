@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -124,7 +123,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         LayoutInflater inflater = (LayoutInflater)
                 this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         //View v = inflater.inflate(R.layout.popup1, null);
-        View v = inflater.inflate(R.layout.activity_transparent_button_horizontal, null);
+        View v = inflater.inflate(R.layout.transparent_buttons_horizontal, null);
 
 
         /*RB1 = (RadioButton) v.findViewById(R.id.radioButton1);
