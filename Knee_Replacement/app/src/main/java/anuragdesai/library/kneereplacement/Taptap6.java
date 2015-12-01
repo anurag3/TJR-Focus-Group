@@ -14,6 +14,7 @@ public class Taptap6 extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState)
     {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey6);
         setTitle("Interface 6");

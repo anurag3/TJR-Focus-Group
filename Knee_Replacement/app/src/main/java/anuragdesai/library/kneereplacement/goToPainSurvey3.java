@@ -37,6 +37,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
 
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey3);
         //udc = new UserDataCollector();
@@ -186,6 +187,7 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         Intent intent = new Intent(this, infopage3.class);
         //sa.surveysRotate();
         startActivity(intent);
+        finish();
 
     }
     public void onface(View v) {

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
     public EditText et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -124,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         }else{
             Intent intent = new Intent(this,informrandomorder.class);
             startActivity(intent);
+            finish();
         }
 
     }

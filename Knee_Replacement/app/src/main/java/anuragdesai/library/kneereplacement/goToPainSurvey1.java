@@ -58,6 +58,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
 
 
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
         //udc = new UserDataCollector();
@@ -266,6 +267,7 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         Intent intent = new Intent(this, infopage1.class);
         startActivity(intent);
+        finish();
 
     }
     //control all the button so that only one choice can be chosen

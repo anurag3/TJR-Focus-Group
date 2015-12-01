@@ -59,6 +59,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     private int currentSelectedFace = -1;
 
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey2);
         //udc = new UserDataCollector();
@@ -265,6 +266,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         Intent intent = new Intent(this, infopage2.class);
         startActivity(intent);
 
+        finish();
     }
 
 

@@ -43,6 +43,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     private DataEntry entry;
 
     protected void onCreate(Bundle savedInstanceState) {
+        System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey4);
         //udc = new UserDataCollector();
@@ -185,6 +186,7 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         //sa.surveysRotate();
         startActivity(intent);
 
+        finish();
 
     }
 

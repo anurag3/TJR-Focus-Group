@@ -91,6 +91,7 @@ public class NextButtonController extends AppCompatActivity implements OnClickLi
 
         //Intent intent = new Intent(M, infopage5.class);
         M.startActivity(intent);
+        finish();
             /*
             }
             else
