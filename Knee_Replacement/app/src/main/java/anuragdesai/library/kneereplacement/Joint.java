@@ -11,13 +11,13 @@ public enum Joint {
             case 1:
                 return BACK;
             case 2:
-                return LEFT_HIP;
-            case 3:
                 return RIGHT_HIP;
+            case 3:
+                return LEFT_HIP;
             case 4:
-                return LEFT_KNEE;
-            case 5:
                 return RIGHT_KNEE;
+            case 5:
+                return LEFT_KNEE;
         }
         return null;
     }

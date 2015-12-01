@@ -88,31 +88,31 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         switch (id) {
             case R.id.bodybtn1:
                 //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.BACK);
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
                 horizontaltap(B1);
                 break;
             case R.id.bodybtn2:
                 //udc.writeToSDFile("Right Hip Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.LEFT_HIP);
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
                 horizontaltap(B2);
                 break;
             case R.id.bodybtn3:
                 //udc.writeToSDFile("Left Hip Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.RIGHT_HIP);
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
                 horizontaltap(B3);
                 break;
             case R.id.bodybtn4:
                 //udc.writeToSDFile("Right Knee Survey Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.LEFT_KNEE);
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
                 horizontaltap(B4);
                 break;
             case R.id.bodybtn5:
                 //udc.writeToSDFile("Left Knee Survey Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.RIGHT_KNEE);
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 horizontaltap(B5);
                 break;

@@ -88,31 +88,31 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         switch (id) {
             case R.id.bodybtn1:
                 //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.BACK);
+                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
                 verticaltap(B1);
                 break;
             case R.id.bodybtn2:
                 //udc.writeToSDFile("Right Hip Survery  Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.LEFT_HIP);
+                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
                 verticaltap(B2);
                 break;
             case R.id.bodybtn3:
                 //udc.writeToSDFile("Left Hip Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.RIGHT_HIP);
+                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
                 verticaltap(B3);
                 break;
             case R.id.bodybtn4:
                 //udc.writeToSDFile("Right Knee Survey Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.LEFT_KNEE);
+                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
                 verticaltap(B4);
                 break;
             case R.id.bodybtn5:
                 //udc.writeToSDFile("Left Knee Survey Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.RIGHT_KNEE);
+                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 verticaltap(B5);
                 break;
