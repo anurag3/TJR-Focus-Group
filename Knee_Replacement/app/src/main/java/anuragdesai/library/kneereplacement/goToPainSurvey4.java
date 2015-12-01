@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
 import java.util.ArrayList;
@@ -31,6 +32,12 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     public Button B3;
     public Button B4;
     public Button B5;
+    private LinearLayout LL1;
+    private LinearLayout LL2;
+    private LinearLayout LL3;
+    private LinearLayout LL4;
+    private LinearLayout LL5;
+    private LinearLayout LL6;
 
     public List<Integer> arr = new ArrayList<Integer>();
     public int a1;
@@ -109,6 +116,42 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         View v = inflater.inflate(R.layout.transparent_button_vertical_scroll, null);
 
         sb = (SeekBar) v.findViewById(R.id.VerticalSeekBar1);
+
+        SeekBar.OnSeekBarChangeListener onChangeListener = new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                System.out.println("HELLO IT'S CHANGED");
+                if (progress <= 16.7) {
+                    enableUnclickedLayouts(6);
+                } else if (progress <= 33.3) {
+                    enableUnclickedLayouts(5);
+                } else if (progress <= 50) {
+                    enableUnclickedLayouts(4);
+                } else if (progress <= 66.7) {
+                    enableUnclickedLayouts(3);
+                } else if (progress <= 83.3) {
+                    enableUnclickedLayouts(2);
+                } else {
+                    enableUnclickedLayouts(1);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        };
+
+        sb.setOnSeekBarChangeListener(onChangeListener);
+
+        LL1 = (LinearLayout) v.findViewById(R.id.layoutbutton1);
+        LL2 = (LinearLayout) v.findViewById(R.id.layoutbutton2);
+        LL3 = (LinearLayout) v.findViewById(R.id.layoutbutton3);
+        LL4 = (LinearLayout) v.findViewById(R.id.layoutbutton4);
+        LL5 = (LinearLayout) v.findViewById(R.id.layoutbutton5);
+        LL6 = (LinearLayout) v.findViewById(R.id.layoutbutton6);
 
         alert.setView(v);
         alert.setPositiveButton("Save",
@@ -199,6 +242,15 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
                 break;
 
         }
+    }
+
+    private void enableUnclickedLayouts(int selected) {
+        LL1.setEnabled(selected != 1);
+        LL2.setEnabled(selected != 2);
+        LL3.setEnabled(selected != 3);
+        LL4.setEnabled(selected != 4);
+        LL5.setEnabled(selected != 5);
+        LL6.setEnabled(selected != 6);
     }
 
     public void onBackPressed() {
