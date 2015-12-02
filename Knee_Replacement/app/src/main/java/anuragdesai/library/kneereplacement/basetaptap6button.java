@@ -82,7 +82,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 //taptap6button.setBackgroundColor(Color.parseColor("#FF669900"));
 //                Toast.makeText(M.getApplicationContext(), "No Hurt",
 //                        Toast.LENGTH_SHORT).show();
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "No Hurt");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "0. No Hurt");
             }
             if (i == 2) {
                 value = 2;
@@ -91,7 +91,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 //taptap6button.setBackgroundColor(Color.parseColor("#FF99CC00"));
 //                Toast.makeText(M.getApplicationContext(), "Hurts Little Bit",
 //                        Toast.LENGTH_SHORT).show();
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little Bit");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "2. Hurts Little Bit");
             }
             if (i == 3) {
                 value = 4;
@@ -100,7 +100,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 //taptap6button.setBackgroundColor(Color.YELLOW);
 //                Toast.makeText(M.getApplicationContext(), "Hurts Little More",
 //                        Toast.LENGTH_SHORT).show();
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little More");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "4. Hurts Little More");
             }
             if (i == 4) {
                 value = 6;
@@ -109,7 +109,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 //taptap6button.setBackgroundColor(Color.parseColor("#FFFFBB33"));
 //                Toast.makeText(M.getApplicationContext(), "Hurts Even More",
 //                        Toast.LENGTH_SHORT).show();
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Even More");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "6. Hurts Even More");
             }
             if (i == 5) {
                 value = 8;
@@ -118,7 +118,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 //taptap6button.setBackgroundColor(Color.parseColor("#FFFF8800"));
 //                Toast.makeText(M.getApplicationContext(), "Hurts Whole Lot",
 //                        Toast.LENGTH_SHORT).show();
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Whole Lot");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "8. Hurts Whole Lot");
             }
             if (i == 6) {
                 value = 10;
@@ -127,7 +127,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
                 //taptap6button.setBackgroundColor(Color.RED);
 //                Toast.makeText(M.getApplicationContext(), "Hurts Worst",
 //                        Toast.LENGTH_SHORT).show();
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Worst");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "10. Hurts Worst");
             }
 
 

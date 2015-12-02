@@ -79,8 +79,9 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
                 d1.setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_ATOP);
                 button.setBackground(d1);
                 //button.setBackgroundColor(Color.GREEN);
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "No Hurt - Hurts Little Bit");
-
+                ToastManager.makeNewToastMessage(M.getApplicationContext(),"0. No Hurt - 2. Hurts Little Bit");
+                //"No Hurt - Hurts Little Bit"
+                //"@string/pain_taptap3_1"
                 value = 2;
                 //Toast.makeText(M.getApplicationContext(), "No Hurt - Hurts Little Bit",
                 //Toast.LENGTH_SHORT).show();
@@ -90,7 +91,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
                 button.setBackground(d1);
                 value = 6;
                 //button.setBackgroundColor(Color.YELLOW);
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Little More - Hurts Even More");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "4. Hurts Little More - 6. Hurts Even More");
 
                 //Toast.makeText(M.getApplicationContext(), "Hurts Little More - Hurts Even More",
                 //Toast.LENGTH_SHORT).show();
@@ -100,7 +101,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
                 button.setBackground(d1);
                 value = 10;
                 //button.setBackgroundColor(Color.RED);
-                ToastManager.makeNewToastMessage(M.getApplicationContext(), "Hurts Whole Lot - Hurts Worst");
+                ToastManager.makeNewToastMessage(M.getApplicationContext(), "8. Hurts Whole Lot - 10. Hurts Worst");
                 //Toast.makeText(M.getApplicationContext(), "Hurts Whole Lot - Hurts Worst",
                 //Toast.LENGTH_SHORT).show();
             }
