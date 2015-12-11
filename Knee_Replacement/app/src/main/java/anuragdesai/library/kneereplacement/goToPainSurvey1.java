@@ -44,6 +44,9 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
     public Button B3;
     public Button B4;
     public Button B5;
+    public Button B1_ext;
+    public Button B2_ext;
+    public Button B4_ext;
     public List<Integer> arr = new ArrayList<Integer>();
     public int a1;
     public int a2;
@@ -69,14 +72,27 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         d1= getResources().getDrawable(R.drawable.roundbutton);
 
 
+
+        B1 = (Button) this.findViewById(R.id.bodybtn1);
+        B2 = (Button) this.findViewById(R.id.bodybtn2);
+        B3 = (Button) this.findViewById(R.id.bodybtn3);
+        B4 = (Button) this.findViewById(R.id.bodybtn4);
+        B5 = (Button) this.findViewById(R.id.bodybtn5);
+        B1_ext = (Button) this.findViewById(R.id.bodybtn1_ext);
+        B2_ext = (Button) this.findViewById(R.id.bodybtn2_ext);
+        B4_ext = (Button) this.findViewById(R.id.bodybtn4_ext);
+
     }
 
     public void buttonselection1(View view) {
-        B1 = (Button) view.findViewById(R.id.bodybtn1);
-        B2 = (Button) view.findViewById(R.id.bodybtn2);
-        B3 = (Button) view.findViewById(R.id.bodybtn3);
-        B4 = (Button) view.findViewById(R.id.bodybtn4);
-        B5 = (Button) view.findViewById(R.id.bodybtn5);
+        /*B1.setOnClickListener(this);
+        B2.setOnClickListener(this);
+        B3.setOnClickListener(this);
+        B4.setOnClickListener(this);
+        B5.setOnClickListener(this);
+        B1_ext.setOnClickListener(this);
+        B2_ext.setOnClickListener(this);
+        B4_ext.setOnClickListener(this);*/
 
         arr.add(0);
         arr.add(0);
@@ -110,12 +126,32 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
                 entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
                 horizontaltap(B4);
+                System.out.println("$$$$$$$$"+B4);
                 break;
             case R.id.bodybtn5:
                 //udc.writeToSDFile("Left Knee Survey Started");
                 entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 horizontaltap(B5);
+                break;
+            case R.id.bodybtn1_ext:
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(1));
+                arr.set(0, 1);
+                horizontaltap(B1);
+                break;
+            case R.id.bodybtn2_ext:
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(2));
+                arr.set(1, 1);
+                horizontaltap(B2);
+                break;
+            case R.id.bodybtn4_ext:
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
+                arr.set(3, 1);
+                horizontaltap(B4);
+                System.out.println("$$$$$$$$"+B4+"##########"+B4_ext);
                 break;
 
         }
@@ -251,6 +287,8 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
                     }
                     d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
                     button.setBackground(d1);
+                    //System.out.println(d1);
+                    // button_ext.setBackground(d1);
                     dialog.dismiss();
 
                 }
