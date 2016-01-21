@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by Anurag on 11/1/2015.
  */
-public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickListener {
+public class goToPainSurvey1 extends BaseSurveyPage implements View.OnClickListener {
 
     //private UserDataCollector udc;
     private RadioButton RB1;
@@ -59,13 +59,15 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
 
     private DataEntry entry;
 
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
+        interfaceName = "Horizontal Tap";
+        interfaceNumber = 1;
         System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey1);
         //udc = new UserDataCollector();
-        setTitle("Horizontal Tap");
+        setTitle(interfaceName);
         button1 = (Button) this.findViewById(R.id.interface1next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
@@ -104,55 +106,41 @@ public class goToPainSurvey1 extends AppCompatActivity implements View.OnClickLi
         int id = view.getId();
         switch (id) {
             case R.id.bodybtn1:
+            case R.id.bodybtn1_ext:
                 //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(1));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
                 horizontaltap(B1);
                 break;
             case R.id.bodybtn2:
+            case R.id.bodybtn2_ext:
                 //udc.writeToSDFile("Right Hip Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(2));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
                 horizontaltap(B2);
                 break;
             case R.id.bodybtn3:
                 //udc.writeToSDFile("Left Hip Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(3));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
                 horizontaltap(B3);
                 break;
             case R.id.bodybtn4:
+            case R.id.bodybtn4_ext:
                 //udc.writeToSDFile("Right Knee Survey Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
                 horizontaltap(B4);
                 System.out.println("$$$$$$$$"+B4);
                 break;
             case R.id.bodybtn5:
                 //udc.writeToSDFile("Left Knee Survey Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(5));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 horizontaltap(B5);
                 break;
-            case R.id.bodybtn1_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(1));
-                arr.set(0, 1);
-                horizontaltap(B1);
-                break;
-            case R.id.bodybtn2_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(2));
-                arr.set(1, 1);
-                horizontaltap(B2);
-                break;
-            case R.id.bodybtn4_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
-                arr.set(3, 1);
-                horizontaltap(B4);
-                System.out.println("$$$$$$$$"+B4+"##########"+B4_ext);
-                break;
+
+
 
         }
     }

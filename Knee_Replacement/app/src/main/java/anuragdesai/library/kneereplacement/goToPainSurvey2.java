@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by Anurag on 11/2/2015.
  */
-public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickListener {
+public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListener {
 
     //private UserDataCollector udc;
     private RadioButton RB1;
@@ -62,11 +62,13 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     private int currentSelectedFace = -1;
 
     protected void onCreate(Bundle savedInstanceState) {
+        interfaceName = "Vertical Tap";
+        interfaceNumber = 2;
         System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey2);
         //udc = new UserDataCollector();
-        setTitle("Vertical Tap");
+        setTitle(interfaceName);
         button1 = (Button) this.findViewById(R.id.interface2next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
@@ -86,7 +88,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
     }
 
     public void buttonselection2(View view) {
-
+        /*
         B1.setOnClickListener(this);
         B2.setOnClickListener(this);
         B3.setOnClickListener(this);
@@ -95,6 +97,7 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
         B1_ext.setOnClickListener(this);
         B2_ext.setOnClickListener(this);
         B4_ext.setOnClickListener(this);
+        */
 
 
         arr.add(0);
@@ -105,54 +108,38 @@ public class goToPainSurvey2 extends AppCompatActivity implements View.OnClickLi
 
         int id = view.getId();
         switch (id) {
+            case R.id.bodybtn1_ext:
             case R.id.bodybtn1:
                 //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(1));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
                 verticaltap(B1);
                 break;
+            case R.id.bodybtn2_ext:
             case R.id.bodybtn2:
                 //udc.writeToSDFile("Right Hip Survery  Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(2));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
                 verticaltap(B2);
                 break;
             case R.id.bodybtn3:
                 //udc.writeToSDFile("Left Hip Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(3));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
                 verticaltap(B3);
                 break;
+            case R.id.bodybtn4_ext:
             case R.id.bodybtn4:
                 //udc.writeToSDFile("Right Knee Survey Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(4));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
                 verticaltap(B4);
                 break;
             case R.id.bodybtn5:
                 //udc.writeToSDFile("Left Knee Survey Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(5));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 verticaltap(B5);
-                break;
-            case R.id.bodybtn1_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(1));
-                arr.set(0, 1);
-                verticaltap(B1);
-                break;
-            case R.id.bodybtn2_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(2));
-                arr.set(1, 1);
-                verticaltap(B2);
-                break;
-            case R.id.bodybtn4_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(2, "VerticalTap", Joint.getJointFromButtonNumber(4));
-                arr.set(3, 1);
-                verticaltap(B4);
-                System.out.println("$$$$$$$$"+B4+"##########"+B4_ext);
                 break;
 
         }

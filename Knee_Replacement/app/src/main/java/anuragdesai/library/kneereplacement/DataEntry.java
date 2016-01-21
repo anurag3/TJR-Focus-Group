@@ -54,7 +54,7 @@ public class DataEntry implements Comparable<DataEntry>{
     }
 
     public static String getHeaders(){
-        return "SubjectID, Order, InterfaceNumber, InterfaceName, StartDate, StartMilliseconds, EndDate, EndMilliseconds, Duration (ms),Joint, PainLevel, Details";
+        return "SubjectID, Order, InterfaceNumber, InterfaceName, StartDate, StartMilliseconds, EndDate, EndMilliseconds, Duration (ms), Interface Button, PainLevel, Details";
     }
 
     public String getCSV(){

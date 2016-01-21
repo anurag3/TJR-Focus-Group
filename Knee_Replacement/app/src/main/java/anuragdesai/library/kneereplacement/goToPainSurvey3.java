@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by Anurag on 11/2/2015.
  */
-public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickListener {
+public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListener {
 
     //private UserDataCollector udc;
     private SeekBar sb;
@@ -47,11 +47,13 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
 
 
     protected void onCreate(Bundle savedInstanceState) {
+        interfaceName = "Horizontal Slide";
+        interfaceNumber = 3;
         System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey3);
         //udc = new UserDataCollector();
-        setTitle("Horizontal Slide");
+        setTitle(interfaceName);
         button1 = (Button) this.findViewById(R.id.interface3next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
@@ -85,52 +87,37 @@ public class goToPainSurvey3 extends AppCompatActivity implements View.OnClickLi
         int id = view.getId();
         switch (id) {
             case R.id.bodybtn1:
+            case R.id.bodybtn1_ext:
                 //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(3, "HorizontalScroll", Joint.getJointFromButtonNumber(1));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
                 horizontalscroll(B1);
                 break;
             case R.id.bodybtn2:
+            case R.id.bodybtn2_ext:
                 //udc.writeToSDFile("Right Hip Survery Started");
-                entry = DataEntry.startEntry(3, "HorizontalScroll", Joint.getJointFromButtonNumber(2));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
                 horizontalscroll(B2);
                 break;
             case R.id.bodybtn3:
                 //udc.writeToSDFile("Left Hip Survery Started");
-                entry = DataEntry.startEntry(3, "HorizontalScroll", Joint.getJointFromButtonNumber(3));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
                 horizontalscroll(B3);
                 break;
             case R.id.bodybtn4:
+            case R.id.bodybtn4_ext:
                 //udc.writeToSDFile("Right Knee Survey Started");
-                entry = DataEntry.startEntry(3, "HorizontalScroll", Joint.getJointFromButtonNumber(4));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName,  Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
                 horizontalscroll(B4);
                 break;
             case R.id.bodybtn5:
                 //udc.writeToSDFile("Left Knee Survey Started");
-                entry = DataEntry.startEntry(3, "HorizontalScroll", Joint.getJointFromButtonNumber(5));
+                entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 horizontalscroll(B5);
-                break;
-            case R.id.bodybtn1_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(1));
-                arr.set(0, 1);
-                horizontalscroll(B1);
-                break;
-            case R.id.bodybtn2_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(2));
-                arr.set(1, 1);
-                horizontalscroll(B2);
-                break;
-            case R.id.bodybtn4_ext:
-                //udc.writeToSDFile("Back Pain Survery Started");
-                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
-                arr.set(3, 1);
-                horizontalscroll(B4);
                 break;
 
         }

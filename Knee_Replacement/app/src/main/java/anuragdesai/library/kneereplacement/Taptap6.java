@@ -8,12 +8,14 @@ import android.widget.Button;
 /**
  * Created by Anurag on 11/3/2015.
  */
-public class Taptap6 extends AppCompatActivity {
+public class Taptap6 extends BaseSurveyPage {
 
     public static int count6;
 
     protected void onCreate(Bundle savedInstanceState)
     {
+        interfaceName = "TapTap6";
+        interfaceNumber = 6;
         System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey6);
