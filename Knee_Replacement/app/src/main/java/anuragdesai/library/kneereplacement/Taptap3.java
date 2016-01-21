@@ -17,7 +17,7 @@ public class Taptap3 extends AppCompatActivity {
         System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey5);
-        setTitle("Interface 5");
+        setTitle("3 Taps");
 
 
         Button buttonnxt = (Button) this.findViewById(R.id.interface5next);

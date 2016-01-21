@@ -17,7 +17,7 @@ public class Taptap6 extends AppCompatActivity {
         System.gc();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.painsurvey6);
-        setTitle("Interface 6");
+        setTitle("6 Taps");
 
 
         Button taptap6buttonnxt = (Button) this.findViewById(R.id.interface6next);
