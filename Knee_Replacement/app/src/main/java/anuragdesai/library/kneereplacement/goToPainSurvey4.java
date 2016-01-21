@@ -32,6 +32,9 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
     public Button B3;
     public Button B4;
     public Button B5;
+    public Button B1_ext;
+    public Button B2_ext;
+    public Button B4_ext;
     private LinearLayout LL1;
     private LinearLayout LL2;
     private LinearLayout LL3;
@@ -59,14 +62,19 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
         button1.setOnClickListener(this);
         button1.setEnabled(false);
         d1= getResources().getDrawable(R.drawable.roundbutton);
+
+        B1 = (Button) this.findViewById(R.id.bodybtn1);
+        B2 = (Button) this.findViewById(R.id.bodybtn2);
+        B3 = (Button) this.findViewById(R.id.bodybtn3);
+        B4 = (Button) this.findViewById(R.id.bodybtn4);
+        B5 = (Button) this.findViewById(R.id.bodybtn5);
+        B1_ext = (Button) this.findViewById(R.id.bodybtn1_ext);
+        B2_ext = (Button) this.findViewById(R.id.bodybtn2_ext);
+        B4_ext = (Button) this.findViewById(R.id.bodybtn4_ext);
     }
 
     public void buttonselection4(View view) {
-        B1 = (Button) view.findViewById(R.id.bodybtn1);
-        B2 = (Button) view.findViewById(R.id.bodybtn2);
-        B3 = (Button) view.findViewById(R.id.bodybtn3);
-        B4 = (Button) view.findViewById(R.id.bodybtn4);
-        B5 = (Button) view.findViewById(R.id.bodybtn5);
+
 
         arr.add(0);
         arr.add(0);
@@ -105,6 +113,24 @@ public class goToPainSurvey4 extends AppCompatActivity implements View.OnClickLi
                 entry = DataEntry.startEntry(4, "VerticalScroll", Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
                 verticalscroll(B5);
+                break;
+            case R.id.bodybtn1_ext:
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(1));
+                arr.set(0, 1);
+                verticalscroll(B1);
+                break;
+            case R.id.bodybtn2_ext:
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(2));
+                arr.set(1, 1);
+                verticalscroll(B2);
+                break;
+            case R.id.bodybtn4_ext:
+                //udc.writeToSDFile("Back Pain Survery Started");
+                entry = DataEntry.startEntry(1, "Horizontal Tap", Joint.getJointFromButtonNumber(4));
+                arr.set(3, 1);
+                verticalscroll(B4);
                 break;
 
         }

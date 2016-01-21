@@ -4,7 +4,113 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     tools:context=".Taptap6">
 
-    <ImageView
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView2"
+            android:src="@drawable/bodyoutline"
+
+            />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bodybtn1"
+            android:onClick="onClick"
+            android:background="@drawable/roundbutton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="246dp" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bodybtn2"
+            android:onClick="onClick"
+            android:background="@drawable/roundbutton"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/bodybtn1"
+            android:layout_toStartOf="@+id/bodybtn1_ext" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bodybtn3"
+            android:onClick="onClick"
+            android:background="@drawable/roundbutton"
+            android:layout_alignTop="@+id/bodybtn2"
+            android:layout_toEndOf="@+id/bodybtn1"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bodybtn4"
+            android:onClick="onClick"
+            android:background="@drawable/roundbutton"
+            android:layout_marginTop="41dp"
+            android:layout_below="@+id/bodybtn2_ext"
+            android:layout_alignStart="@+id/bodybtn2" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bodybtn5"
+            android:onClick="onClick"
+            android:background="@drawable/roundbutton"
+            android:layout_alignTop="@+id/bodybtn4"
+            android:layout_alignStart="@+id/bodybtn3"
+            android:layout_marginStart="3dp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/interface6next"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:onClick="onClick"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bodybtn1_ext"
+            android:background="@drawable/roundbutton"
+            android:onClick="onClick"
+            android:alpha="0.3"
+            android:layout_above="@+id/bodybtn3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp" />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bodybtn2_ext"
+            android:background="@drawable/roundbutton"
+            android:alpha="0.3"
+            android:onClick="onClick"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/bodybtn1"
+            android:layout_toStartOf="@+id/bodybtn1" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bodybtn4_ext"
+            android:background="@drawable/roundbutton"
+            android:alpha="0.3"
+            android:onClick="onClick"
+            android:layout_below="@+id/bodybtn2_ext"
+            android:layout_alignStart="@+id/bodybtn2_ext"
+            android:layout_marginTop="29dp" />
+
+
+
+    </RelativeLayout>
+<!--    <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/imageView2"
@@ -75,4 +181,4 @@
         android:onClick="onClick" />
 
 
-</RelativeLayout>
+</RelativeLayout>-->
