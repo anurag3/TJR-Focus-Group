@@ -31,8 +31,8 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
         this.buttonNum = buttonNum;
         this.nextBtn = nextBtn;
         buttonsPressed = 0;
-        //d1= getResources().getDrawable(R.drawable.roundbutton);
-        d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
+        //d1= getResources().getDrawable(R.drawable.roundbutton1);
+        d1 = ContextCompat.getDrawable(M, R.drawable.round_button_with_center);
     }
 
 
@@ -61,14 +61,14 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
         }
         {
             i++;
-            d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
+            d1 = ContextCompat.getDrawable(M, R.drawable.round_button_with_center);
 
 
             if (i == 7) {
                 i = 0;
             }
             if (i == 0) {
-                d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 value = -1;
                 //taptap6button.setBackgroundColor(Color.GRAY);
@@ -77,7 +77,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
 
             if (i == 1) {
                 value = 0;
-                d1.setColorFilter(Color.parseColor("#FF669900"), PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.parseColor("#FF669900"), PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FF669900"));
 //                Toast.makeText(M.getApplicationContext(), "No Hurt",
@@ -86,7 +86,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
             }
             if (i == 2) {
                 value = 2;
-                d1.setColorFilter(Color.parseColor("#FF99CC00"), PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.parseColor("#FF99CC00"), PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FF99CC00"));
 //                Toast.makeText(M.getApplicationContext(), "Hurts Little Bit",
@@ -95,7 +95,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
             }
             if (i == 3) {
                 value = 4;
-                d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.YELLOW);
 //                Toast.makeText(M.getApplicationContext(), "Hurts Little More",
@@ -104,7 +104,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
             }
             if (i == 4) {
                 value = 6;
-                d1.setColorFilter(Color.parseColor("#FFFFBB33"), PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.parseColor("#FFFFBB33"), PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FFFFBB33"));
 //                Toast.makeText(M.getApplicationContext(), "Hurts Even More",
@@ -113,7 +113,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
             }
             if (i == 5) {
                 value = 8;
-                d1.setColorFilter(Color.parseColor("#FFFF8800"), PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.parseColor("#FFFF8800"), PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.parseColor("#FFFF8800"));
 //                Toast.makeText(M.getApplicationContext(), "Hurts Whole Lot",
@@ -122,7 +122,7 @@ public class basetaptap6button extends AppCompatActivity implements View.OnClick
             }
             if (i == 6) {
                 value = 10;
-                d1.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.RED, PorterDuff.Mode.SCREEN);
                 taptap6button.setBackground(d1);
                 //taptap6button.setBackgroundColor(Color.RED);
 //                Toast.makeText(M.getApplicationContext(), "Hurts Worst",

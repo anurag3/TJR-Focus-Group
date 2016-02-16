@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/bodyoutline"
+
+        />
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn1"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_marginTop="224dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn1_ext"
+        android:background="@drawable/roundbutton1"
+        android:onClick="buttonselection4"
+        android:alpha="0.3"
+        android:layout_alignBaseline="@+id/bodybtn1"
+        android:layout_alignBottom="@+id/bodybtn1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn2"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/bodybtn1_ext"
+        android:layout_marginEnd="13dp" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn2_ext"
+        android:background="@drawable/roundbutton1"
+        android:alpha="0.3"
+        android:onClick="buttonselection4"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/bodybtn1_ext" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn4"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_marginTop="67dp"
+        android:layout_below="@+id/bodybtn2_ext"
+        android:layout_toStartOf="@+id/bodybtn1_ext" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn4_ext"
+        android:background="@drawable/roundbutton1"
+        android:alpha="0.3"
+        android:onClick="buttonselection4"
+        android:layout_below="@+id/bodybtn2_ext"
+        android:layout_toStartOf="@+id/bodybtn1"
+        android:layout_marginTop="55dp" />
+</RelativeLayout>

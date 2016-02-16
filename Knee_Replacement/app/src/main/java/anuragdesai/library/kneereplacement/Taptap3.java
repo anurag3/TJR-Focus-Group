@@ -10,7 +10,7 @@ import android.widget.Button;
  */
 public class Taptap3 extends BaseSurveyPage {
 
-    public Button button1;
+    public Button button1,button2,button4;
     public static int count5;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class Taptap3 extends BaseSurveyPage {
         buttonnxt.setOnClickListener(buttonController);
         buttonnxt.setEnabled(false);
 
-        Button button1 = (Button) this.findViewById(R.id.bodybtn1);
+       /* Button button1 = (Button) this.findViewById(R.id.bodybtn1);
         button1.setOnClickListener(new basebodybutton(button1, this, 1, buttonController));
 
         Button button2 = (Button) this.findViewById(R.id.bodybtn2);
@@ -43,15 +43,15 @@ public class Taptap3 extends BaseSurveyPage {
 
         Button button5 = (Button) this.findViewById(R.id.bodybtn5);
         button5.setOnClickListener(new basebodybutton(button5, this, 5, buttonController));
-
+*/
         Button button1_ext = (Button) this.findViewById(R.id.bodybtn1_ext);
-        button1_ext.setOnClickListener(new basebodybutton(button1, this, 1, buttonController));
+        button1_ext.setOnClickListener(new basebodybutton(button1_ext, this, 1, buttonController));
 
         Button button2_ext  = (Button) this.findViewById(R.id.bodybtn2_ext);
-        button2_ext.setOnClickListener(new basebodybutton(button2, this, 2, buttonController));
+        button2_ext.setOnClickListener(new basebodybutton(button2_ext, this, 2, buttonController));
 
         Button button4_ext  = (Button) this.findViewById(R.id.bodybtn4_ext);
-        button4_ext.setOnClickListener(new basebodybutton(button4, this, 4, buttonController));
+        button4_ext.setOnClickListener(new basebodybutton(button4_ext, this, 4, buttonController));
 
     }
     /*public void checker()

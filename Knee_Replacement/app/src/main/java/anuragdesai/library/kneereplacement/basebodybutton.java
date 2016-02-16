@@ -30,8 +30,8 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
         this.M = M;
         this.buttonNum = buttonNum;
         this.nextBtn = nextBtn;
-        //d1= getResources().getDrawable(R.drawable.roundbutton);
-        d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
+        //d1= getResources().getDrawable(R.drawable.roundbutton1);
+        d1 = ContextCompat.getDrawable(M, R.drawable.round_button_with_center);
 
     }
 
@@ -63,20 +63,20 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
         {
             i++;
             //mToast.cancel();
-            d1 = ContextCompat.getDrawable(M, R.drawable.roundbutton);
+            d1 = ContextCompat.getDrawable(M, R.drawable.round_button_with_center);
 
             if (i == 4) {
                 i = 0;
                 value = -1;
             }
             if (i == 0) {
-                d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.GRAY, PorterDuff.Mode.SCREEN);
                 button.setBackground(d1);
                 value = -1;
                 //button.setBackgroundColor(Color.GRAY);
             }
             if (i == 1) {
-                d1.setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.GREEN, PorterDuff.Mode.SCREEN);
                 button.setBackground(d1);
                 //button.setBackgroundColor(Color.GREEN);
                 ToastManager.makeNewToastMessage(M.getApplicationContext(),"0. No Hurt - 2. Hurts Little Bit");
@@ -87,7 +87,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
                 //Toast.LENGTH_SHORT).show();
             }
             if (i == 2) {
-                d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.YELLOW, PorterDuff.Mode.SCREEN);
                 button.setBackground(d1);
                 value = 6;
                 //button.setBackgroundColor(Color.YELLOW);
@@ -97,7 +97,7 @@ public class basebodybutton extends AppCompatActivity implements OnClickListener
                 //Toast.LENGTH_SHORT).show();
             }
             if (i == 3) {
-                d1.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
+                d1.setColorFilter(Color.RED, PorterDuff.Mode.SCREEN);
                 button.setBackground(d1);
                 value = 10;
                 //button.setBackgroundColor(Color.RED);

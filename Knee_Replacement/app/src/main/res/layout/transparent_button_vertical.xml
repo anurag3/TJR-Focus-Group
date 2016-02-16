@@ -7,10 +7,10 @@
     tools:context="anuragdesai.library.kneereplacement.goToPainSurvey2"
     android:orientation="vertical">
 
-    <LinearLayout
+    <!--LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:background="@drawable/custom_button_a"
+        android:background="@drawable/custom_button_grey"
         android:onClick="face1"
         android:clickable="true"
         android:focusable="true"
@@ -31,22 +31,22 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:textColor="@color/black"/>
-    </LinearLayout>
+    </LinearLayout-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:background="@drawable/custom_button_b"
+        android:background="@drawable/custom_button_grey"
         android:onClick="face2"
         android:clickable="true"
         android:focusable="true"
         android:layout_marginBottom="5dp"
         android:id="@+id/layoutbutton2">
-        <ImageView
+        <!--ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:src="@drawable/b_transparent"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"/-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -60,18 +60,18 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:background="@drawable/custom_button_c"
+        android:background="@drawable/custom_button_grey"
         android:onClick="face3"
         android:clickable="true"
         android:focusable="true"
         android:layout_marginBottom="5dp"
         android:id="@+id/layoutbutton3" >
-        <ImageView
+        <!--ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:src="@drawable/c_transparent"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"/-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -85,18 +85,18 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:background="@drawable/custom_button_d"
+        android:background="@drawable/custom_button_grey"
         android:onClick="face4"
         android:clickable="true"
         android:focusable="true"
         android:layout_marginBottom="5dp"
         android:id="@+id/layoutbutton4" >
-        <ImageView
+        <!--ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:src="@drawable/d_transparent"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"/-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -110,18 +110,18 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:background="@drawable/custom_button_e"
+        android:background="@drawable/custom_button_grey"
         android:onClick="face5"
         android:clickable="true"
         android:focusable="true"
         android:layout_marginBottom="5dp"
         android:id="@+id/layoutbutton5" >
-        <ImageView
+        <!--ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:src="@drawable/e_transparent"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"/-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -135,18 +135,18 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="60dp"
-        android:background="@drawable/custom_button_f"
+        android:background="@drawable/custom_button_grey"
         android:onClick="face6"
         android:clickable="true"
         android:focusable="true"
         android:layout_marginBottom="5dp"
         android:id="@+id/layoutbutton6" >
-        <ImageView
+        <!--ImageView
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:src="@drawable/f_transparent"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"/-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

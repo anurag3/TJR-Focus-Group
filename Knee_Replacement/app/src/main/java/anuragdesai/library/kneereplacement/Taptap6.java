@@ -27,7 +27,7 @@ public class Taptap6 extends BaseSurveyPage {
         taptap6buttonnxt.setOnClickListener(buttonController);
         taptap6buttonnxt.setEnabled(false);
 
-        Button taptap6button1 = (Button) this.findViewById(R.id.bodybtn1);
+        /*Button taptap6button1 = (Button) this.findViewById(R.id.bodybtn1);
         taptap6button1.setOnClickListener(new basetaptap6button(taptap6button1,this, 1, buttonController));
         Button taptap6button2 = (Button) this.findViewById(R.id.bodybtn2);
         taptap6button2.setOnClickListener(new basetaptap6button(taptap6button2,this, 2, buttonController));
@@ -37,15 +37,15 @@ public class Taptap6 extends BaseSurveyPage {
         taptap6button4.setOnClickListener(new basetaptap6button(taptap6button4, this, 4, buttonController));
         Button taptap6button5 = (Button) this.findViewById(R.id.bodybtn5);
         taptap6button5.setOnClickListener(new basetaptap6button(taptap6button5,this, 5, buttonController));
-
+*/
         Button button1_ext = (Button) this.findViewById(R.id.bodybtn1_ext);
-        button1_ext.setOnClickListener(new basetaptap6button(taptap6button1, this, 1, buttonController));
+        button1_ext.setOnClickListener(new basetaptap6button(button1_ext, this, 1, buttonController));
 
         Button button2_ext  = (Button) this.findViewById(R.id.bodybtn2_ext);
-        button2_ext.setOnClickListener(new basetaptap6button(taptap6button2, this, 2, buttonController));
+        button2_ext.setOnClickListener(new basetaptap6button(button2_ext, this, 2, buttonController));
 
         Button button4_ext  = (Button) this.findViewById(R.id.bodybtn4_ext);
-        button4_ext.setOnClickListener(new basetaptap6button(taptap6button4, this, 4, buttonController));
+        button4_ext.setOnClickListener(new basetaptap6button(button4_ext, this, 4, buttonController));
 
 
     }

@@ -31,12 +31,12 @@ public class gotoSurveyActivity extends AppCompatActivity {
             //setContentView(R.layout.startsurvey);
             // Generate a list of number of random order
             dataList = new ArrayList<Integer>();
-            for (int i = 1; i < 7; i++) {
+            for (int i = 1; i < 5; i++) {
                 dataList.add(i);
             }
 
             Collections.shuffle(dataList);
-            dataList.add(7);
+            dataList.add(5);
         /*num = new int[dataList.size()];
         for (int i = 0; i < dataList.size(); i++) {
             num[i] = dataList.get(i);
@@ -46,7 +46,7 @@ public class gotoSurveyActivity extends AppCompatActivity {
         }
 
         switch (dataList.get(i))
-        //switch (6)
+        //switch (4)
         {
             case 1:
                 //udc.writeToSDFile("Interface 1 Opened");
@@ -76,7 +76,7 @@ public class gotoSurveyActivity extends AppCompatActivity {
                 Intent intent4 = new Intent(this, goToPainSurvey4.class);
                 startActivity(intent4, null);
                 break;
-            case 5:
+            /*case 5:
                 //udc.writeToSDFile("Interface 5 Opened");
                 System.out.println("5");
                 i++;
@@ -89,7 +89,7 @@ public class gotoSurveyActivity extends AppCompatActivity {
                 i++;
                 Intent intent6 = new Intent(this, Taptap6.class);
                 startActivity(intent6, null);
-                break;
+                break;*/
 
             default:
                 flag = 0;
@@ -103,7 +103,7 @@ public class gotoSurveyActivity extends AppCompatActivity {
 
     public static String getOrder(){
         String s = "";
-        for(int i = 0; i < 6; i++){
+        for(int i = 0; i < 5; i++){
             s += dataList.get(i) + " ";
         }
         return s;

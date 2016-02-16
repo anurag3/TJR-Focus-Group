@@ -13,11 +13,19 @@
     <string name="title_activity_transparent_button_text">TransparentButtonText</string>
 
     <string name="pain_6">10. Hurts Worst</string>
-    <string name="pain_5">8. Hurts Whole Lot</string>
-    <string name="pain_4">6. Hurts Even More</string>
-    <string name="pain_3">4. Hurts Little More</string>
-    <string name="pain_2">2. Hurts Little Bit</string>
-    <string name="pain_1">0. No Hurt</string>
+    <string name="pain_5">5. Extreme</string>
+    <string name="pain_4">4. Severe</string>
+    <string name="pain_3">3. Moderate</string>
+    <string name="pain_2">2. Mild</string>
+    <string name="pain_1">1. None</string>
+
+    <string name="pain_6_1">10. Hurts Worst</string>
+    <string name="pain_5_1">5.\nExtreme</string>
+    <string name="pain_4_1">4.\nSevere</string>
+    <string name="pain_3_1">3.\nModerate</string>
+    <string name="pain_2_1">2.\nMild</string>
+    <string name="pain_1_1">1.\nNone</string>
+
     <string name="pain_taptap3_1">0. No Hurt - 2. Hurts Little Bit</string>
     <string name="pain_taptap3_2">4. Hurts Little More - 6. Hurts Even More</string>
     <string name="pain_taptap3_3">8. Hurts Whole Lot - 10. Hurts Worst</string>

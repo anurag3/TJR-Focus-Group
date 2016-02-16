@@ -8,7 +8,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -57,14 +56,14 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
         button1 = (Button) this.findViewById(R.id.interface3next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
-        d1=getResources().getDrawable(R.drawable.roundbutton);
+        d1=getResources().getDrawable(R.drawable.round_button_with_center);
 
 
         B1 = (Button) this.findViewById(R.id.bodybtn1);
         B2 = (Button) this.findViewById(R.id.bodybtn2);
-        B3 = (Button) this.findViewById(R.id.bodybtn3);
+        B3 = (Button) this.findViewById(R.id.bodybtn3_ext);
         B4 = (Button) this.findViewById(R.id.bodybtn4);
-        B5 = (Button) this.findViewById(R.id.bodybtn5);
+        B5 = (Button) this.findViewById(R.id.bodybtn5_ext);
         B1_ext = (Button) this.findViewById(R.id.bodybtn1_ext);
 
         B2_ext = (Button) this.findViewById(R.id.bodybtn2_ext);
@@ -91,16 +90,16 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
                 //udc.writeToSDFile("Back Pain Survery Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
-                horizontalscroll(B1);
+                horizontalscroll(B1_ext);
                 break;
             case R.id.bodybtn2:
             case R.id.bodybtn2_ext:
                 //udc.writeToSDFile("Right Hip Survery Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
-                horizontalscroll(B2);
+                horizontalscroll(B2_ext);
                 break;
-            case R.id.bodybtn3:
+            case R.id.bodybtn3_ext:
                 //udc.writeToSDFile("Left Hip Survery Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
@@ -111,9 +110,9 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
                 //udc.writeToSDFile("Right Knee Survey Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName,  Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
-                horizontalscroll(B4);
+                horizontalscroll(B4_ext);
                 break;
-            case R.id.bodybtn5:
+            case R.id.bodybtn5_ext:
                 //udc.writeToSDFile("Left Knee Survey Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
@@ -127,7 +126,7 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
 
 
     public void horizontalscroll(final Button button) {
-        d1 = ContextCompat.getDrawable(this, R.drawable.roundbutton);
+        d1 = ContextCompat.getDrawable(this, R.drawable.round_button_with_center);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         AlertDialog dialog;
         alert.setTitle("Pain Survey");
@@ -143,19 +142,19 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-                if (progress <= 16.7) {
+                if (progress <= 20) {
                     enableUnclickedLayouts(6);
-                } else if (progress <= 33.3) {
+                } else if (progress <= 40) {
                     enableUnclickedLayouts(5);
-                } else if (progress <= 50) {
+                } else if (progress <= 60) {
                     enableUnclickedLayouts(4);
-                } else if (progress <= 66.7) {
+                } else if (progress <= 80) {
                     enableUnclickedLayouts(3);
-                } else if (progress <= 83.3) {
-                    enableUnclickedLayouts(2);
                 } else {
+                    enableUnclickedLayouts(2);
+                } /*else {
                     enableUnclickedLayouts(1);
-                }
+                }*/
             }
 
             @Override
@@ -167,7 +166,7 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
 
         sb.setOnSeekBarChangeListener(onChangeListener);
 
-        LL1 = (LinearLayout) v.findViewById(R.id.layoutbutton1);
+        //LL1 = (LinearLayout) v.findViewById(R.id.layoutbutton1);
         LL2 = (LinearLayout) v.findViewById(R.id.layoutbutton2);
         LL3 = (LinearLayout) v.findViewById(R.id.layoutbutton3);
         LL4 = (LinearLayout) v.findViewById(R.id.layoutbutton4);
@@ -182,35 +181,35 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
                         int progress = sb.getProgress();
                         String s;
 
-                        if (progress <= 16.7) {
+                        if (progress <= 20) {
                             s = "No Hurt";
                             colorToChangeTo = Utils.getColorForLevel(1);
                             entry.endEntry(0);
-                        } else if (progress <= 33.3) {
+                        } else if (progress <= 40) {
                             s = "Hurts Little Bit";
                             colorToChangeTo = Utils.getColorForLevel(2);
                             entry.endEntry(2);
-                        } else if (progress <= 50) {
+                        } else if (progress <= 60) {
                             s = "Hurts Little More";
                             colorToChangeTo = Utils.getColorForLevel(3);
                             entry.endEntry(4);
-                        } else if (progress <= 66.7) {
+                        } else if (progress <= 80) {
                             s = "Hurts Even More";
                             colorToChangeTo = Utils.getColorForLevel(4);
                             entry.endEntry(6);
-                        } else if (progress <= 83.3) {
+                        } else {
                             s = "Hurts Whole Lot";
                             colorToChangeTo = Utils.getColorForLevel(5);
                             entry.endEntry(8);
-                        } else {
+                        } /*else {
                             s = "Hurts Worst";
                             colorToChangeTo = Utils.getColorForLevel(6);
                             entry.endEntry(10);
-                        }
+                        }*/
                         //udc.writeToSDFile("Survey 3 submitted");
                         //udc.writeToSDFile("Survey 3 result: " + s);
                         System.out.println("1st Button");
-                        d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
+                        d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SCREEN);
                         button.setBackground(d1);
 
                         buttonCounter.recordValueStored(button);
@@ -250,29 +249,29 @@ public class goToPainSurvey3 extends BaseSurveyPage implements View.OnClickListe
         String facenumber = (String) v.getTag();
 
         switch (facenumber) {
-            case "1":
+            /*case "1":
                 sb.setProgress(97);
-                break;
+                break;*/
             case "2":
-                sb.setProgress(77);
+                sb.setProgress(90);
                 break;
             case "3":
-                sb.setProgress(58);
+                sb.setProgress(70);
                 break;
             case "4":
-                sb.setProgress(40);
+                sb.setProgress(50);
                 break;
             case "5":
-                sb.setProgress(22);
+                sb.setProgress(30);
                 break;
             case "6":
-                sb.setProgress(5);
+                sb.setProgress(10);
                 break;
         }
     }
 
     private void enableUnclickedLayouts(int selected) {
-        LL1.setEnabled(selected != 1);
+        //LL1.setEnabled(selected != 1);
         LL2.setEnabled(selected != 2);
         LL3.setEnabled(selected != 3);
         LL4.setEnabled(selected != 4);

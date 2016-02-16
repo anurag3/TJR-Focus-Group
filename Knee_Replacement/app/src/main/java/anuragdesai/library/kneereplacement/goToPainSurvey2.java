@@ -8,7 +8,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -72,12 +71,12 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
         button1 = (Button) this.findViewById(R.id.interface2next);
         button1.setOnClickListener(this);
         button1.setEnabled(false);
-        d1= getResources().getDrawable(R.drawable.roundbutton);
+        d1= getResources().getDrawable(R.drawable.round_button_with_center);
         B1 = (Button) this.findViewById(R.id.bodybtn1);
         B2 = (Button) this.findViewById(R.id.bodybtn2);
-        B3 = (Button) this.findViewById(R.id.bodybtn3);
+        B3 = (Button) this.findViewById(R.id.bodybtn3_ext);
         B4 = (Button) this.findViewById(R.id.bodybtn4);
-        B5 = (Button) this.findViewById(R.id.bodybtn5);
+        B5 = (Button) this.findViewById(R.id.bodybtn5_ext);
         B1_ext = (Button) this.findViewById(R.id.bodybtn1_ext);
 
         B2_ext = (Button) this.findViewById(R.id.bodybtn2_ext);
@@ -113,16 +112,16 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
                 //udc.writeToSDFile("Back Pain Survery Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(1));
                 arr.set(0, 1);
-                verticaltap(B1);
+                verticaltap(B1_ext);
                 break;
             case R.id.bodybtn2_ext:
             case R.id.bodybtn2:
                 //udc.writeToSDFile("Right Hip Survery  Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(2));
                 arr.set(1, 1);
-                verticaltap(B2);
+                verticaltap(B2_ext);
                 break;
-            case R.id.bodybtn3:
+            case R.id.bodybtn3_ext:
                 //udc.writeToSDFile("Left Hip Survery Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(3));
                 arr.set(2, 1);
@@ -133,9 +132,9 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
                 //udc.writeToSDFile("Right Knee Survey Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(4));
                 arr.set(3, 1);
-                verticaltap(B4);
+                verticaltap(B4_ext);
                 break;
-            case R.id.bodybtn5:
+            case R.id.bodybtn5_ext:
                 //udc.writeToSDFile("Left Knee Survey Started");
                 entry = DataEntry.startEntry(interfaceNumber, interfaceName, Joint.getJointFromButtonNumber(5));
                 arr.set(4, 1);
@@ -147,7 +146,7 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
     }
 
     public void verticaltap(final Button button) {
-        d1 = ContextCompat.getDrawable(this, R.drawable.roundbutton);
+        d1 = ContextCompat.getDrawable(this, R.drawable.round_button_with_center);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final AlertDialog dialog;
         alert.setTitle("Pain Survey 2");
@@ -164,7 +163,7 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
         RB5 = (RadioButton) v.findViewById(R.id.radioButton5);
         RB6 = (RadioButton) v.findViewById(R.id.radioButton6);*/
 
-        LL1 = (LinearLayout) v.findViewById(R.id.layoutbutton1);
+        //LL1 = (LinearLayout) v.findViewById(R.id.layoutbutton1);
         LL2 = (LinearLayout) v.findViewById(R.id.layoutbutton2);
         LL3 = (LinearLayout) v.findViewById(R.id.layoutbutton3);
         LL4 = (LinearLayout) v.findViewById(R.id.layoutbutton4);
@@ -274,7 +273,7 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
                     } else {
                         button1.setEnabled(false);
                     }
-                    d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SRC_ATOP);
+                    d1.setColorFilter(colorToChangeTo, PorterDuff.Mode.SCREEN);
                     button.setBackground(d1);
                     dialog.dismiss();
                 }
@@ -348,7 +347,7 @@ public class goToPainSurvey2 extends BaseSurveyPage implements View.OnClickListe
 
     private void enableUnclickedLayouts(int selected) {
         currentSelectedFace = selected;
-        LL1.setEnabled(selected != 1);
+        //LL1.setEnabled(selected != 1);
         LL2.setEnabled(selected != 2);
         LL3.setEnabled(selected != 3);
         LL4.setEnabled(selected != 4);

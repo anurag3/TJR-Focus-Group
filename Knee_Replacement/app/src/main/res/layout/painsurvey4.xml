@@ -5,7 +5,88 @@
     tools:context=".goToPainSurvey4">
 
 
-        <ImageView
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/bodyoutline"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn1_ext"
+        android:background="@drawable/round_button_with_center"
+        android:onClick="buttonselection4"
+        android:alpha="0.95"
+        android:layout_above="@+id/bodybtn3_ext"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn2_ext"
+        android:background="@drawable/round_button_with_center"
+        android:alpha="0.95"
+        android:onClick="buttonselection4"
+        android:layout_below="@+id/bodybtn1_ext"
+        android:layout_toLeftOf="@+id/bodybtn1_ext"
+        android:layout_toStartOf="@+id/bodybtn1_ext" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn4_ext"
+        android:background="@drawable/round_button_with_center"
+        android:alpha="0.95"
+        android:onClick="buttonselection4"
+        android:layout_below="@+id/bodybtn2_ext"
+        android:layout_alignLeft="@+id/bodybtn2_ext"
+        android:layout_alignStart="@+id/bodybtn2_ext"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="53dp" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn3_ext"
+        android:background="@drawable/round_button_with_center"
+        android:onClick="buttonselection4"
+        android:alpha="0.95"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/bodybtn1_ext"
+        android:layout_toEndOf="@+id/bodybtn1_ext"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn5_ext"
+        android:background="@drawable/round_button_with_center"
+        android:alpha="0.95"
+        android:onClick="buttonselection4"
+        android:layout_alignTop="@+id/bodybtn4_ext"
+        android:layout_alignRight="@+id/bodybtn3_ext"
+        android:layout_alignEnd="@+id/bodybtn3_ext"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/interface4next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:onClick="onClick" />
+
+
+</RelativeLayout>
+   <!--     <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/imageView2"
@@ -13,52 +94,24 @@
 
             />
 
-        <Button
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/bodybtn1"
-            android:onClick="buttonselection4"
-            android:background="@drawable/roundbutton"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="246dp" />
-
-        <Button
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/bodybtn2"
-            android:onClick="buttonselection4"
-            android:background="@drawable/roundbutton"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/bodybtn1"
-            android:layout_toStartOf="@+id/bodybtn1_ext" />
 
         <Button
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:id="@+id/bodybtn3"
             android:onClick="buttonselection4"
-            android:background="@drawable/roundbutton"
+            android:background="@drawable/roundbutton1"
             android:layout_alignTop="@+id/bodybtn2"
             android:layout_toEndOf="@+id/bodybtn1"
             android:visibility="invisible" />
 
-        <Button
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/bodybtn4"
-            android:onClick="buttonselection4"
-            android:background="@drawable/roundbutton"
-            android:layout_marginTop="41dp"
-            android:layout_below="@+id/bodybtn2_ext"
-            android:layout_alignStart="@+id/bodybtn2" />
 
         <Button
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:id="@+id/bodybtn5"
             android:onClick="buttonselection4"
-            android:background="@drawable/roundbutton"
+            android:background="@drawable/roundbutton1"
             android:layout_alignTop="@+id/bodybtn4"
             android:layout_alignStart="@+id/bodybtn3"
             android:layout_marginStart="3dp"
@@ -75,42 +128,68 @@
             android:onClick="onClick"
             android:visibility="visible" />
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/bodybtn1_ext"
-            android:background="@drawable/roundbutton"
-            android:onClick="buttonselection4"
-            android:alpha="0.3"
-            android:layout_above="@+id/bodybtn3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="12dp" />
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/bodybtn2_ext"
-            android:background="@drawable/roundbutton"
-            android:alpha="0.3"
-            android:onClick="buttonselection4"
-            android:layout_marginTop="12dp"
-            android:layout_below="@+id/bodybtn1"
-            android:layout_toStartOf="@+id/bodybtn1" />
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/bodybtn4_ext"
-            android:background="@drawable/roundbutton"
-            android:alpha="0.3"
-            android:onClick="buttonselection4"
-            android:layout_below="@+id/bodybtn2_ext"
-            android:layout_alignStart="@+id/bodybtn2_ext"
-            android:layout_marginTop="29dp" />
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn1"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_marginTop="224dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn1_ext"
+        android:background="@drawable/roundbutton1"
+        android:onClick="buttonselection4"
+        android:alpha="0.3"
+        android:layout_alignBaseline="@+id/bodybtn1"
+        android:layout_alignBottom="@+id/bodybtn1"
+        android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn2"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/bodybtn1_ext"
+        android:layout_marginEnd="13dp" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn2_ext"
+        android:background="@drawable/roundbutton1"
+        android:alpha="0.3"
+        android:onClick="buttonselection4"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/bodybtn1_ext" />
 
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn4"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_marginTop="67dp"
+        android:layout_below="@+id/bodybtn2_ext"
+        android:layout_toStartOf="@+id/bodybtn1_ext" />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/bodybtn4_ext"
+        android:background="@drawable/roundbutton1"
+        android:alpha="0.3"
+        android:onClick="buttonselection4"
+        android:layout_below="@+id/bodybtn2_ext"
+        android:layout_toStartOf="@+id/bodybtn1"
+        android:layout_marginTop="55dp" />
 
     </RelativeLayout>
-   <!-- <ImageView
+    <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/imageView2"
@@ -123,7 +202,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn1"
         android:onClick="buttonselection4"
-        android:background="@drawable/roundbutton"
+        android:background="@drawable/roundbutton1"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -132,7 +211,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn2"
         android:onClick="buttonselection4"
-        android:background="@drawable/roundbutton"
+        android:background="@drawable/roundbutton1"
         android:layout_marginEnd="7dp"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/bodybtn1"
@@ -142,7 +221,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn3"
         android:onClick="buttonselection4"
-        android:background="@drawable/roundbutton"
+        android:background="@drawable/roundbutton1"
         android:layout_alignTop="@+id/bodybtn2"
         android:layout_toEndOf="@+id/bodybtn1"
         android:visibility="invisible" />
@@ -152,7 +231,7 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn4"
         android:onClick="buttonselection4"
-        android:background="@drawable/roundbutton"
+        android:background="@drawable/roundbutton1"
         android:layout_marginTop="38dp"
         android:layout_below="@+id/bodybtn2"
         android:layout_alignEnd="@+id/bodybtn2"
@@ -163,21 +242,75 @@
         android:layout_height="25dp"
         android:id="@+id/bodybtn5"
         android:onClick="buttonselection4"
-        android:background="@drawable/roundbutton"
+        android:background="@drawable/roundbutton1"
         android:layout_alignTop="@+id/bodybtn4"
         android:layout_alignStart="@+id/bodybtn3"
         android:layout_marginStart="3dp"
         android:visibility="invisible" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/interface4next"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:textStyle="bold"
-        android:onClick="onClick" />
 
+
+extra
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn1"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_marginTop="224dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/bodybtn2"
+        android:onClick="buttonselection4"
+        android:background="@drawable/roundbutton1"
+        android:layout_below="@+id/bodybtn1_ext"
+        android:layout_toStartOf="@+id/bodybtn1_ext"
+        android:layout_marginEnd="9dp" />
+
+    <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/bodybtn4"
+            android:onClick="buttonselection4"
+            android:background="@drawable/roundbutton1"
+            android:layout_alignBottom="@+id/bodybtn4_ext"
+            android:layout_toStartOf="@+id/bodybtn1_ext" />
+
+
+ <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bodybtn1_ext"
+            android:background="@drawable/roundbutton1"
+            android:onClick="buttonselection4"
+            android:alpha="0.3"
+            android:layout_alignBaseline="@+id/bodybtn1"
+            android:layout_alignBottom="@+id/bodybtn1"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bodybtn2_ext"
+            android:background="@drawable/roundbutton1"
+            android:alpha="0.3"
+            android:onClick="buttonselection4"
+            android:layout_below="@+id/bodybtn1"
+            android:layout_toStartOf="@+id/bodybtn1"
+            android:layout_marginEnd="7dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/bodybtn4_ext"
+            android:background="@drawable/roundbutton1"
+            android:alpha="0.3"
+            android:onClick="buttonselection4"
+            android:layout_marginTop="62dp"
+            android:layout_below="@+id/bodybtn2_ext"
+            android:layout_toStartOf="@+id/bodybtn1" />
 
 </RelativeLayout>-->
